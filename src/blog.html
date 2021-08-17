@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>webpack boilerplate 📦</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--    <link rel="icon" href="./favicon.ico">-->
+  <meta
+    name="Description"
+    content="A simple yet thorough webpack starter boilerplate for static websites that achieves high performance and cover all best practices."
+  />
+
+  <!-- Open Graph data / Facebook Card data -->
+  <meta property="og:title" content="webpack boilerplate" />
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:url"
+    content="https://github.com/frogggggi/webpack-boilerplate"
+  />
+  <meta property="og:image" content="https://i.imgur.com/lxRBpeb.jpg" />
+  <meta
+    property="og:image:alt"
+    content="A blue package, symbolizing what webpack does."
+  />
+  <meta
+    property="og:description"
+    content="A simple yet thorough webpack starter boilerplate for static websites that achieves high performance and cover all best practices."
+  />
+
+  <!-- Telegram Card data -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@AlexandrIvashc1" />
+
+  <!-- Mobile header color for Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#2c638f" />
+  <!-- Mobile header color Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#2c638f" />
+  <!-- Mobile header color for iOS Safari (supports black, black-translucent or default) -->
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+  />
+  <script
+    defer
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+  ></script>
+
+</head>
+
+<body class='page-about'>
+<div class="wrapper">
+  <section class='headline_section'>
+    <div class='container'>
+      <div class='headline'>
+        <div class='headline_item headline_item-map'>
+          <span class="icon-map"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></span>
+          Москва,  ул. Воронцовская, д. 6, стр. 2, эт. 3
+        </div>
+        <div class='headline_item headline_item-social'>
+          <div class='headline_item-socialtext'>Мы в социальных сетях:</div>
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Мы во Инстаграме"><span class="icon-insta"><span class="path4"></span></span></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Мы во VK"><span class="icon-vk"><span class="path4"></span></span></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Мы в Твиттере"><span class="icon-twitter"><span class="path4"></span></span></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Мы в Фейсбуке"><span class="icon-facebook"><span class="path3"></span></span></a>
+            </li>
+          </ul>
+        </div>
+        <div class='headline_item headline_item-auth'>
+          <a href='#' class='headline_item-authlink'>Вход</a> <span class='delim'>/</span> <a href='#'>Регистрация</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="logo-link" href="/" aria-label="Tristan's webpack boilerplate github repository.">
+          <img class="logo-img" src="images/logo_FinSelf.svg" alt="website logo" />
+        </a>
+        <a class="nav_actions-phone show_mobile" href="tel:+7 (495) 151-10-15">+7 (495) 151-10-15</a>
+        <nav role="navigation" id="access">
+          <a class="skip-link icon-menu" title="Меню" href=""></a>
+          <ul id="menu">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="about.html">О компании</a></li>
+            <li><a href="services.html">Услуги и цены</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="works.html">Дела</a></li>
+            <li class="active"><a href="blog.html">Блог</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class='nav_actions'>
+          <a class="nav_actions-phone" href="tel:+7 (495) 151-10-15">+7 (495) 151-10-15</a>
+          <button type="button" class="btn nav_actions-btn"  data-open="modal1">Обратный звонок</button>
+        </div>
+      </div>
+      <div class='nav_mobile'>
+        <a class="logo-link_mobile" href="/" >
+          <img class="logo-img_mobile" src="images/logo_FinSelf.svg" alt="website logo" />
+        </a>
+        <a class="skip-link_mobile icon-close" title="Меню" href=""></a>
+        <div class='nav_actions nav_actions_mobile'>
+          <a class="nav_actions-phone" href="tel:+7 (495) 151-10-15">+7 (495) 151-10-15</a>
+          <div class='headline_item-auth'>
+            <a href='#' class='headline_item-authlink'>Вход</a> <span class='delim'>/</span> <a href='#'>Регистрация</a>
+          </div>
+        </div>
+        <nav role="navigation" >
+          <ul id="menu_mobile">
+            <li class="active"><a href="#home">Главная</a></li>
+            <li><a href="#about">О компании</a></li>
+            <li><a href="#services">Услуги и цены</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#tasks">Дела</a></li>
+            <li><a href="#blog">Блог</a></li>
+            <li><a href="#contact">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class='headline_item headline_item-social'>
+          <div class='headline_item-socialtext'>Мы в социальных сетях:</div>
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Мы во Инстаграме"><span class="icon-insta"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Мы во VK"><span class="icon-vk"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Мы в Твиттере"><span class="icon-twitter"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Мы в Фейсбуке"><span class="icon-facebook"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <section class='reviews_section blog_section'>
+    <div class='container'>
+      <div class="title">Полезные статьи</div>
+      <div class='un_box'>
+        <div class='blog__container'>
+          <div class='blog_item'>
+            <a  href='#' class='blog_img'><img src='./images/blog_img_1.jpg' alt='' class='responze'></a>
+            <a href="#"  class='blog_title'>Заявление о вступлении в дело о банкротстве</a>
+            <div class='blog_info'>
+              <div class='blog_date'>02.08.2021   </div>
+              <div class='blog_time'>16:42</div>
+              <div class='blog_views'><span class="icon-view"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> 4,2 тыс</div>
+            </div>
+            <div class='blog_descr'>После начала процесса кредиторы должны направить в арбитражный суд заявление о вступлении в дело о банкротстве...</div>
+            <a href='#' class='blog_btn btn'>Читать подробнее <span class="icon-arrow"><span class="path1"></span></span></a>
+          </div>
+          <div class='blog_item'>
+            <a  href='#' class='blog_img'><img src='./images/blog_img_1.jpg' alt='' class='responze'></a>
+            <a href="#"  class='blog_title'>Заявление о вступлении в дело о банкротстве</a>
+            <div class='blog_info'>
+              <div class='blog_date'>02.08.2021   </div>
+              <div class='blog_time'>16:42</div>
+              <div class='blog_views'><span class="icon-view"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> 4,2 тыс</div>
+            </div>
+            <div class='blog_descr'>После начала процесса кредиторы должны направить в арбитражный суд заявление о вступлении в дело о банкротстве...</div>
+            <a href='#' class='blog_btn btn'>Читать подробнее <span class="icon-arrow"><span class="path1"></span></span></a>
+          </div>
+          <div class='blog_item'>
+            <a  href='#' class='blog_img'><img src='./images/blog_img_1.jpg' alt='' class='responze'></a>
+            <a href="#"  class='blog_title'>Заявление о вступлении в дело о банкротстве</a>
+            <div class='blog_info'>
+              <div class='blog_date'>02.08.2021   </div>
+              <div class='blog_time'>16:42</div>
+              <div class='blog_views'><span class="icon-view"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> 4,2 тыс</div>
+            </div>
+            <div class='blog_descr'>После начала процесса кредиторы должны направить в арбитражный суд заявление о вступлении в дело о банкротстве...</div>
+            <a href='#' class='blog_btn btn'>Читать подробнее <span class="icon-arrow"><span class="path1"></span></span></a>
+          </div>
+          <div class='blog_item'>
+            <a  href='#' class='blog_img'><img src='./images/blog_img_1.jpg' alt='' class='responze'></a>
+            <a href="#"  class='blog_title'>Заявление о вступлении в дело о банкротстве</a>
+            <div class='blog_info'>
+              <div class='blog_date'>02.08.2021   </div>
+              <div class='blog_time'>16:42</div>
+              <div class='blog_views'><span class="icon-view"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> 4,2 тыс</div>
+            </div>
+            <div class='blog_descr'>После начала процесса кредиторы должны направить в арбитражный суд заявление о вступлении в дело о банкротстве...</div>
+            <a href='#' class='blog_btn btn'>Читать подробнее <span class="icon-arrow"><span class="path1"></span></span></a>
+          </div>
+          <div class='blog_item'>
+            <a  href='#' class='blog_img'><img src='./images/blog_img_1.jpg' alt='' class='responze'></a>
+            <a href="#"  class='blog_title'>Заявление о вступлении в дело о банкротстве</a>
+            <div class='blog_info'>
+              <div class='blog_date'>02.08.2021   </div>
+              <div class='blog_time'>16:42</div>
+              <div class='blog_views'><span class="icon-view"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> 4,2 тыс</div>
+            </div>
+            <div class='blog_descr'>После начала процесса кредиторы должны направить в арбитражный суд заявление о вступлении в дело о банкротстве...</div>
+            <a href='#' class='blog_btn btn'>Читать подробнее <span class="icon-arrow"><span class="path1"></span></span></a>
+          </div>
+
+        </div>
+        <div class='consultation'>
+          <form class='form_wrapper' action='' method='post'>
+            <div class='form_container'>
+              <div class='form_title'>Узнайте на бесплатной
+                консультации как лично вам, избавиться от долгов</div>
+              <input type='text' class='form_input' placeholder='Как Вас зовут?'>
+              <input type='text' class='form_input' placeholder='+7 (999) 999-99-99'>
+              <input type='submit' class='form_btn btn' value='Перезвоните мне'>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <footer>
+    <div class='container'>
+      <div class='footer_box'>
+        <div class='footer_column'>
+          <a href='/' class='footer_logo'>
+            <img src='./images/logo_FinSelf_wh.svg' alt='' class='footer_img responze'>
+          </a>
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Мы во Инстаграме"><span class="icon-insta"><span class="path4"></span></span></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Мы во VK"><span class="icon-vk"><span class="path4"></span></span></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Мы в Твиттере"><span class="icon-twitter"><span class="path4"></span></span></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link" aria-label="Мы в Фейсбуке"><span class="icon-facebook"><span class="path3"></span></span></a>
+            </li>
+          </ul>
+          <div class='footer_flex show_mobile'>
+            <div class='footer_fl'>Быстрая бесплатная консультация -
+              <a href='tel:+7 (495) 151-10-15' class='footer_flex-phone'>+7 (495) 151-10-15</a>
+            </div>
+            <button type="button" class="footer_fr btn"  data-open="modal1">Обратный звонок</button>
+          </div>
+          <a href='#' class='footer_link'>Политика конфиденциальности сайта</a>
+          <a href='#' class='footer_link'>Правила использования ресурса</a>
+        </div>
+        <div class='footer_column'>
+          <div class='footer_title'>Главная</div>
+          <ul class='footer_list'>
+            <li class='footer_item'><a  href="#" class='footer_item-link'>О компании</a></li>
+            <li class='footer_item'><a  href="#" class='footer_item-link'>Услуги</a></li>
+            <li class='footer_item'><a  href="#" class='footer_item-link'>Цены</a></li>
+            <li class='footer_item'><a  href="#" class='footer_item-link'>Отзывы</a></li>
+            <li class='footer_item'><a  href="#" class='footer_item-link'>Дела</a></li>
+            <li class='footer_item'><a  href="#" class='footer_item-link'>Блог</a></li>
+            <li class='footer_item'><a  href="#" class='footer_item-link'>Контакты</a></li>
+          </ul>
+        </div>
+        <div class='footer_column'>
+          <div class='footer_title'>Контакты</div>
+          <div class='footer_label'>@email</div>
+          <a href='mailto:info@finself.ru' class='footer_href'>info@finself.ru</a>
+          <div class='footer_label'>телефон</div>
+          <a href='tel:+7 012 354 56 32' class='footer_href'>+7 012 354 56 32</a>
+          <div class='footer_label'>адрес</div>
+          <div class='footer_addr'>Москва, ул. Воронцовская, д. 6, стр. 2, эт. 3</div>
+        </div>
+        <div class='footer_column'>
+          <div class='footer_text'>Duis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Maecenas </div>
+          <div class='footer_flex'>
+            <div class='footer_fl'>Быстрая бесплатная консультация -</div>
+            <button type="button" class="footer_fr btn"  data-open="modal1">Обратный звонок</button>
+          </div>
+          <div class='footer_cookie-title'>использование cookie</div>
+          <div class='footer_cookie'>
+            <div class='footer_cookie-text'>Нажав на “принять” вы даёте согласие на использование cookie-файлов.
+              Это необходимо для правильной работы ресурса</div>
+            <div class='footer_cookie-btn'>Принять</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='footer_copybox'>
+      <div class='container'>
+        <div class='footer_copyright'>© 2018 - 2020 FinSelf - Все права защищены</div>
+      </div>
+    </div>
+  </footer>
+  <div class='modalny' id="modal1" >
+    <div class="modal-dialog">
+      <button class="close-modal" aria-label="close modal" data-close>
+        ✕
+      </button>
+      <form class="form_wrapper" action="" method="post">
+        <div class="form_container">
+          <div class="form_title">Заполните поля ниже и мы Вам перезвоним в ближайшие 5 минут!</div>
+          <input type="text" class="form_input" placeholder="Как Вас зовут?">
+          <input type="text" class="form_input" placeholder="+7 (999) 999-99-99">
+          <input type="submit" class="form_btn btn" value="Перезвоните мне">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class='modalny' id="thanksbox" >
+    <div class="modal-dialog">
+      <button class="close-modal" aria-label="close modal" data-close>
+        ✕
+      </button>
+      <div class="form_wrapper" >
+        <div class="form_container">
+          <div class="thanksbox-title">Спасибо за отправку! <br> Мы Вам перезвоним в ближайшие 5 минут!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

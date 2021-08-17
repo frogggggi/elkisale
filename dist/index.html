@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>webpack boilerplate 📦</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--    <link rel="icon" href="./favicon.ico">-->
+    <meta
+      name="Description"
+      content="A simple yet thorough webpack starter boilerplate for static websites that achieves high performance and cover all best practices."
+    />
+
+    <!-- Open Graph data / Facebook Card data -->
+    <meta property="og:title" content="webpack boilerplate" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://github.com/frogggggi/webpack-boilerplate"
+    />
+    <meta property="og:image" content="https://i.imgur.com/lxRBpeb.jpg" />
+    <meta
+      property="og:image:alt"
+      content="A blue package, symbolizing what webpack does."
+    />
+    <meta
+      property="og:description"
+      content="A simple yet thorough webpack starter boilerplate for static websites that achieves high performance and cover all best practices."
+    />
+
+    <!-- Telegram Card data -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@AlexandrIvashc1" />
+
+    <!-- Mobile header color for Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#2c638f" />
+    <!-- Mobile header color Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#2c638f" />
+    <!-- Mobile header color for iOS Safari (supports black, black-translucent or default) -->
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+
+  <link rel="shortcut icon" href="/assets/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png"><link rel="manifest" href="/assets/manifest.json"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#FFA8A8"><meta name="application-name" content="tris-webpack-boilerplate"><link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/assets/apple-touch-icon-1024x1024.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="tris-webpack-boilerplate"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-640x1136.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-750x1334.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-828x1792.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1125x2436.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1242x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1242x2688.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1536x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1668x2224.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1668x2388.png"><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-2048x2732.png"><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1620x2160.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-1136x640.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-1334x750.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-1792x828.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2436x1125.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2208x1242.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2688x1242.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2048x1536.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2224x1668.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2388x1668.png"><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2732x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2160x1620.png"><meta name="msapplication-TileColor" content="#fafafa"><meta name="msapplication-TileImage" content="/assets/mstile-144x144.png"><meta name="msapplication-config" content="/assets/browserconfig.xml"><link href="style.e69a02d9e83dfbf099e2.css" rel="stylesheet"><script defer src="main.9c22a888baceb5324483.js"></script><script defer src="vendor.082df6408dbf30898941.js"></script><link as="font" crossorigin="anonymous" href="fonts/ProximaNova-Black.woff" rel="preload"><link as="font" crossorigin="anonymous" href="fonts/ProximaNova-Bold.woff" rel="preload"><link as="font" crossorigin="anonymous" href="fonts/ProximaNova-Regular.woff" rel="preload"><link as="font" crossorigin="anonymous" href="fonts/ProximaNova-Semibold.woff" rel="preload"><link as="font" crossorigin="anonymous" href="fonts/icomoon.ttf" rel="preload"><link as="font" crossorigin="anonymous" href="fonts/icomoon.woff" rel="preload"></head>
+
+  <body>
+  <div class="wrapper">
+    <section class="headline_section">
+      <div class="container">
+        <div class="headline">
+          <a class="logo-link" href="/" >
+            <img class="logo-img" src="images/logo.svg" alt="website logo" />
+          </a>
+          <div class="mob_burger"><span class="icon-mob_nav"></span></div>
+          <div class="mob_logo_flex">
+            <a class="logo-mob" href="/" >
+              <img class="logo-img" src="images/logo_mob.svg" alt="website logo" />
+            </a>
+            <a href="tel:+7 (495) 772-36-33" class="phone_mob_logo">+7 (495) 772-36-33</a>
+          </div>
+          <a href="#" class="mob_cart"><span class="icon-cart"><span class="cart_count">1</span></span></a>
+          <div class="headline_item headline_item-auth">
+            <div class="headline_item headline_item-social">
+              <ul class="social">
+                <li class="social__item">
+                  <a href="#" class="social__link blue" aria-label="Мы во Telegram"><span class="icon-soc_1"></span></a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link purple" aria-label="Мы во Viber"><span class="icon-soc_2"></span></a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link green" aria-label="Мы в Watsapp"><span class="icon-soc_3"></span></a>
+                </li>
+              </ul>
+            </div>
+            <a class="nav_actions-phone" href="tel:+7 (495) 151-10-15">+7 (495) 151-10-15</a>
+            <button type="button" class="btn nav_actions-btn"  data-open="modal1">Заказать звонок</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <header>
+      <div class="container">
+        <div class="nav">
+          <nav role="navigation" id="access">
+            <a class="skip-link icon-menu" title="Меню" href=""></a>
+            <ul id="menu">
+              <li><a href="#"><span class="icon-catalog"></span>Каталог</a></li>
+              <li class="spacer"></li>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li class="spacer"></li>
+              <li class="active"><a href="#">Ёлки оптом</a></li>
+              <li class="spacer"></li>
+              <li><a href="#">Наш склад</a></li>
+              <li class="spacer"></li>
+              <li><a href="#">О нас</a></li>
+              <li class="spacer"></li>
+              <li><a href="#">Контакты</a></li>
+              <li class="spacer"></li>
+              <li><a href="#"><span class="icon-cart"><span class="cart_count">1</span></span>Корзина</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="nav_mobile nav_mobile_js">
+      <div class="close_nav_mobile"><span class="icon-cross"></span></div>
+      <div class="bg_nav_mobile"></div>
+      <div class="nav_mobile-wrapper">
+        <a class="logo-link_mobile" href="/" >
+          <img class="logo-img_mobile" src="images/logo.svg" alt="website logo" />
+        </a>
+        <nav class="mobile_navi">
+          <a class="skip-link icon-menu" title="Меню" href=""></a>
+          <ul id="menu_mob">
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li class="active"><a href="#">Ёлки оптом</a></li>
+            <li><a href="#">Наш склад</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Корзина</a></li>
+          </ul>
+        </nav>
+        <div class="nav_mobile_soc-phone">
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link blue" aria-label="Мы во Telegram"><span class="icon-soc_1"></span></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link purple" aria-label="Мы во Viber"><span class="icon-soc_2"></span></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link green" aria-label="Мы в Watsapp"><span class="icon-soc_3"></span></a>
+            </li>
+          </ul>
+          <a href="tel:+7 (495) 772-36-33" class="nav_mobile_sphone">+7 (495) 772-36-33</a>
+          <a href="#" class="nav_mobile_btn btn">Заказать звонок</a>
+        </div>
+      </div>
+    </div>
+    <section class="mainslider_section">
+      <div class="mainslider_jS">
+        <div class="mainslider_box">
+          <div class="container">
+            <div class="mainslider_wrapper">
+              <div class="">
+                <div class="swiper-container main_slider_js">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="mainslider_title title">Купить новогоднюю ёлку с доставкой на дом в Москве  — это  просто!</div></div>
+                    <div class="swiper-slide"><div class="mainslider_title title">Купить новогоднюю ёлку Купить новогоднюю ёлку с доставкой на дом в Москве  — это  просто!</div></div>
+                    <div class="swiper-slide"><div class="mainslider_title title">Купить новогоднюю ёлку с доставкой на дом в Москве  — это  просто!</div></div>
+                    <div class="swiper-slide"><div class="mainslider_title title">Купить новогоднюю ёлку с доставкой на дом в Москве  — это  просто!</div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="mainslider_untill">До Нового Года осталось:</div>
+              <div class="mainslider_timer">
+                <div class="mainslider_timer-item">
+                  <div class="mainslider_timer-value">199</div>
+                  <div class="mainslider_timer-name">Дни</div>
+                </div>
+                <div class="mainslider_timer-item">
+                  <div class="mainslider_timer-value">10</div>
+                  <div class="mainslider_timer-name">Часы</div>
+                </div>
+                <div class="mainslider_timer-item">
+                  <div class="mainslider_timer-value">55</div>
+                  <div class="mainslider_timer-name">Минуты</div>
+                </div>
+                <div class="mainslider_timer-item">
+                  <div class="mainslider_timer-value">27</div>
+                  <div class="mainslider_timer-name">Секунды</div>
+                </div>
+              </div>
+              <a href="#" class="mainslider_btn btn">Выбрать ёлку</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ektithis_section">
+      <div class="container">
+        <div class="ektithis_title title">Интернет-магазин Elki.Sale это</div>
+        <div class="ektithis_wrapper">
+          <div class="ektithis_item">
+            <div class="ektithis_icon"><span class="icon-cash-multiple"><span class="path1"></span><span class="path2"></span></span></div>
+            <div class="ektithis_text">Доступные<br> цены</div>
+          </div>
+          <div class="ektithis_item">
+            <div class="ektithis_icon"><span class="icon-shopping-outline"><span class="path1"></span><span class="path2"></span></span></div>
+            <div class="ektithis_text">Широкий ассортимент товара</div>
+          </div>
+          <div class="ektithis_item">
+            <div class="ektithis_icon"><span class="icon-Frame-10"><span class="path1"></span><span class="path2"></span></span></div>
+            <div class="ektithis_text">Разнообразие размеров</div>
+          </div>
+          <div class="ektithis_item">
+            <div class="ektithis_icon"><span class="icon-seal-variant"><span class="path1"></span><span class="path2"></span></span></div>
+            <div class="ektithis_text">Высокое качество продукции</div>
+          </div>
+           <div class="ektithis_item">
+            <div class="ektithis_icon"><span class="icon-cart-outline"><span class="path1"></span><span class="path2"></span></span></div>
+            <div class="ektithis_text">Возможность купить оптом и в розницу</div>
+          </div>
+          <div class="ektithis_item">
+            <div class="ektithis_icon"><span class="icon-account-heart-outline"><span class="path1"></span><span class="path2"></span></span></div>
+            <div class="ektithis_text">Грамотная поддержка специалиста</div>
+          </div>
+          <div class="ektithis_item">
+            <div class="ektithis_icon"><span class="icon-basket-plus-outline"><span class="path1"></span><span class="path2"></span></span></div>
+            <div class="ektithis_text">Покупка через сайт в несколько кликов</div>
+          </div>
+          <div class="ektithis_item">
+            <div class="ektithis_icon"><span class="icon-truck-delivery-outline"><span class="path1"></span><span class="path2"></span></span></div>
+            <div class="ektithis_text">Удобная и оперативная доставка</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="prodmain_section">
+      <div class="container">
+        <div class="prodmain_title title">Срезанные</div>
+        <div class="prodmain_wrapper">
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/tree_1.jpg" class="responze" alt=""><div class="prodmain_price">от 3 450 ₽</div></div>
+            <div class="prodmain_name">Датские ели</div>
+          </div>
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/tree_1.jpg" class="responze" alt=""><div class="prodmain_price">от 3 450 ₽</div></div>
+            <div class="prodmain_name">Пихты Фразера</div>
+          </div>
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/tree_1.jpg" class="responze" alt=""><div class="prodmain_price">от 3 450 ₽</div></div>
+            <div class="prodmain_name">Норвежские ели</div>
+          </div>
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/tree_1.jpg" class="responze" alt=""><div class="prodmain_price">от 3 450 ₽</div></div>
+            <div class="prodmain_name">Голубые ели</div>
+          </div>
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/tree_1.jpg" class="responze" alt=""><div class="prodmain_price">от 3 450 ₽</div></div>
+            <div class="prodmain_name">Канадские сосны</div>
+          </div>
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/tree_1.jpg" class="responze" alt=""><div class="prodmain_price">от 3 450 ₽</div></div>
+            <div class="prodmain_name">Русские ели</div>
+          </div>
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/tree_1.jpg" class="responze" alt=""><div class="prodmain_price">от 3 450 ₽</div></div>
+            <div class="prodmain_name">Новогодние сосны</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="prodmain_section">
+      <div class="container">
+        <div class="prodmain_title title">В горшках</div>
+        <div class="prodmain_wrapper">
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/tree_1.jpg" class="responze" alt=""><div class="prodmain_price">от 3 450 ₽</div></div>
+            <div class="prodmain_name">Датские ели в горшках</div>
+          </div>
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/tree_1.jpg" class="responze" alt=""><div class="prodmain_price">от 3 450 ₽</div></div>
+            <div class="prodmain_name">Пихты Фразера в горшках</div>
+          </div>
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/tree_1.jpg" class="responze" alt=""><div class="prodmain_price">от 3 450 ₽</div></div>
+            <div class="prodmain_name">Норвежские ели в горшках</div>
+          </div>
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/tree_1.jpg" class="responze" alt=""><div class="prodmain_price">от 3 450 ₽</div></div>
+            <div class="prodmain_name">Голубые ели в горшках</div>
+          </div>
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/tree_1.jpg" class="responze" alt=""><div class="prodmain_price">от 3 450 ₽</div></div>
+            <div class="prodmain_name">Русские ели в горшках</div>
+          </div>
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/tree_1.jpg" class="responze" alt=""><div class="prodmain_price">от 3 450 ₽</div></div>
+            <div class="prodmain_name">Европейские ели в горшках</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="prodmain_section">
+      <div class="container">
+        <div class="prodmain_title title">Аксессуары</div>
+        <div class="prodmain_wrapper">
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/product_1.jpg" alt="" class="responze"></div>
+            <div class="prodmain_name">Жидкость для елок Bona...</div>
+          </div>
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/product_2.jpg" alt="" class="responze"></div>
+            <div class="prodmain_name">Пакет для утилизации ёлок</div>
+          </div>
+          <div class="prodmain_item">
+            <div class="prodmain_img"><img src="images/product_3.jpg" alt="" class="responze"></div>
+            <div class="prodmain_name">Лапник</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner_section">
+      <div class="container">
+        <div class="banner_wrapper">
+          <div class="banner_title title">Подберем самую лучшую елку!</div>
+          <div class="banner_text">Оставьте заявку и наш менеджер свяжется с вами</div>
+          <div class="banner_btn btn">Связаться</div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="oursklad_section">
+      <div class="container">
+        <div class="oursklad_title title">Наш склад</div>
+        <div class="oursklad_flex">
+          <div class="oursklad_col">
+            <img src="images/sklad.jpg" alt="" class="responze">
+          </div>
+          <div class="oursklad_col">
+            <p>Хотите выбрать идеальную новогоднюю ёлку?</p>
+            <p>Ощутить её аромат, потрогать хвою, лично оценить пышность и высоту? Нет ничего проще! Компания «Elki.sale» приглашает Вас посетить собственный склад живой продукции.</p><p>Понравившееся дерево Вы сразу же можете приобрести и забрать самовывозом. Если для Вас это проблематично, мы оформим адресную доставку на удобное для Вас время.</p>
+            <p>Рассчитаться за свою покупку Вы можете наличным и безналичным расчётом.</p>
+            <p>Приезжайте и выбирайте своё новогоднее дерево.</p>
+            <div class="oursklad_btn btn" >Узнать больше</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq_section">
+      <div class="container">
+        <div class="faq_title title">F.A.Q.</div>
+        <div class="faq__accord">
+          <div class="faq_item active">
+            <div class="faq_name"><span>Почему выгодно покупать ёлки у нас?</span> <div class="faq_control"><span class="icon-pluss"></span></div></div>
+            <div class="faq_descr">
+              Избежать разочарований, связанных с приобретением некачественной елки на Новый год можно, если обратиться в наш интернет-магазин.Мы работаем с 2005 года, а в 2016 году стали лучшей компанией на столичном рынке по выращиванию и продаже новогодних деревьев. У нас вы непременно подберете дерево по своему вкусу, исходя из нужной формы и габаритов.
+              Чтобы оставить заявку, можно позвонить по телефону +7 (495) 991-91-20, заказать обратный звонок, положить выбранный товар в «корзину» или отправить сообщение по электронной почте. Наш менеджер свяжется с вами, чтобы обговорить условия дальнейшего сотрудничества.
+            </div>
+          </div>
+          <div class="faq_item">
+            <div class="faq_name"><span>Есть ли у вас доставка?</span> <div class="faq_control"><span class="icon-pluss"></span></div></div>
+            <div class="faq_descr">
+              Избежать разочарований, связанных с приобретением некачественной елки на Новый год можно, если обратиться в наш интернет-магазин.Мы работаем с 2005 года, а в 2016 году стали лучшей компанией на столичном рынке по выращиванию и продаже новогодних деревьев. У нас вы непременно подберете дерево по своему вкусу, исходя из нужной формы и габаритов.
+              Чтобы оставить заявку, можно позвонить по телефону +7 (495) 991-91-20, заказать обратный звонок, положить выбранный товар в «корзину» или отправить сообщение по электронной почте. Наш менеджер свяжется с вами, чтобы обговорить условия дальнейшего сотрудничества.
+            </div>
+          </div>
+          <div class="faq_item">
+            <div class="faq_name"><span>Я хочу сам выбрать ёлку, это возможно?</span> <div class="faq_control"><span class="icon-pluss"></span></div></div>
+            <div class="faq_descr">
+              Избежать разочарований, связанных с приобретением некачественной елки на Новый год можно, если обратиться в наш интернет-магазин.Мы работаем с 2005 года, а в 2016 году стали лучшей компанией на столичном рынке по выращиванию и продаже новогодних деревьев. У нас вы непременно подберете дерево по своему вкусу, исходя из нужной формы и габаритов.
+              Чтобы оставить заявку, можно позвонить по телефону +7 (495) 991-91-20, заказать обратный звонок, положить выбранный товар в «корзину» или отправить сообщение по электронной почте. Наш менеджер свяжется с вами, чтобы обговорить условия дальнейшего сотрудничества.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="nevsmain_section">
+      <div class="container">
+        <div class="faq_title title">Новости.</div>
+        <div class="nevsmain_swrapper">
+          <div class="news_slider_arrows news_slider_prev"><span class="icon-arrow"></span></div>
+          <div class="news_slider_arrows news_slider_next"><span class="icon-arrow"></span></div>
+          <div class="swiper-container news_slider_js">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="nevsmain_stitle-item">
+                  <div class="nevsmain_ime"><img src="images/news_1.jpg" alt="" class="responze"></div>
+                  <div class="nevsmain_content">
+                    <div class="nevsmain_name">Живые ёлки
+                      по доступной цене</div>
+                    <div class="nevsmain_text">Хотите, чтобы предновогоднее время ваш дом украсила самая красивая ёлочка? Закажите живые ёлки, сосны или пихты у нас! В нашем питомнике растут самые ухоженные деревья</div>
+                    <div class="nevsmain_date">13 октября 2020</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="nevsmain_stitle-item">
+                  <div class="nevsmain_ime"><img src="images/news_1.jpg" alt="" class="responze"></div>
+                  <div class="nevsmain_content">
+                    <div class="nevsmain_name">Живые ёлки
+                      по доступной цене</div>
+                    <div class="nevsmain_text">Хотите, чтобы предновогоднее время ваш дом украсила самая красивая ёлочка? Закажите живые ёлки, сосны или пихты у нас! В нашем питомнике растут самые ухоженные деревья</div>
+                    <div class="nevsmain_date">13 октября 2020</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="nevsmain_stitle-item">
+                  <div class="nevsmain_ime"><img src="images/news_1.jpg" alt="" class="responze"></div>
+                  <div class="nevsmain_content">
+                    <div class="nevsmain_name">Живые ёлки
+                      по доступной цене</div>
+                    <div class="nevsmain_text">Хотите, чтобы предновогоднее время ваш дом украсила самая красивая ёлочка? Закажите живые ёлки, сосны или пихты у нас! В нашем питомнике растут самые ухоженные деревья</div>
+                    <div class="nevsmain_date">13 октября 2020</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="nevsmain_stitle-item">
+                  <div class="nevsmain_ime"><img src="images/news_1.jpg" alt="" class="responze"></div>
+                  <div class="nevsmain_content">
+                    <div class="nevsmain_name">Живые ёлки
+                      по доступной цене</div>
+                    <div class="nevsmain_text">Хотите, чтобы предновогоднее время ваш дом украсила самая красивая ёлочка? Закажите живые ёлки, сосны или пихты у нас! В нашем питомнике растут самые ухоженные деревья</div>
+                    <div class="nevsmain_date">13 октября 2020</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="nevsmain_stitle-item">
+                  <div class="nevsmain_ime"><img src="images/news_1.jpg" alt="" class="responze"></div>
+                  <div class="nevsmain_content">
+                    <div class="nevsmain_name">Живые ёлки
+                      по доступной цене</div>
+                    <div class="nevsmain_text">Хотите, чтобы предновогоднее время ваш дом украсила самая красивая ёлочка? Закажите живые ёлки, сосны или пихты у нас! В нашем питомнике растут самые ухоженные деревья</div>
+                    <div class="nevsmain_date">13 октября 2020</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="nevsmain_stitle-item">
+                  <div class="nevsmain_ime"><img src="images/news_1.jpg" alt="" class="responze"></div>
+                  <div class="nevsmain_content">
+                    <div class="nevsmain_name">Живые ёлки
+                      по доступной цене</div>
+                    <div class="nevsmain_text">Хотите, чтобы предновогоднее время ваш дом украсила самая красивая ёлочка? Закажите живые ёлки, сосны или пихты у нас! В нашем питомнике растут самые ухоженные деревья</div>
+                    <div class="nevsmain_date">13 октября 2020</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="nevsmain_stitle-item">
+                  <div class="nevsmain_ime"><img src="images/news_1.jpg" alt="" class="responze"></div>
+                  <div class="nevsmain_content">
+                    <div class="nevsmain_name">Живые ёлки
+                      по доступной цене</div>
+                    <div class="nevsmain_text">Хотите, чтобы предновогоднее время ваш дом украсила самая красивая ёлочка? Закажите живые ёлки, сосны или пихты у нас! В нашем питомнике растут самые ухоженные деревья</div>
+                    <div class="nevsmain_date">13 октября 2020</div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="nevsmain_stitle-item">
+                  <div class="nevsmain_ime"><img src="images/news_1.jpg" alt="" class="responze"></div>
+                  <div class="nevsmain_content">
+                    <div class="nevsmain_name">Живые ёлки
+                      по доступной цене</div>
+                    <div class="nevsmain_text">Хотите, чтобы предновогоднее время ваш дом украсила самая красивая ёлочка? Закажите живые ёлки, сосны или пихты у нас! В нашем питомнике растут самые ухоженные деревья</div>
+                    <div class="nevsmain_date">13 октября 2020</div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          <a href="#" class="swiper_btn_more">Смотреть еще</a>
+        </div>
+        <div class="seotext_block">
+          <p>Избежать разочарований, связанных с приобретением некачественной елки на Новый год можно, если обратиться в наш интернет-магазин. Мы работаем с 2005 года, а в 2016 году стали лучшей компанией на столичном рынке по выращиванию и продаже новогодних деревьев. У нас вы непременно подберете дерево по своему вкусу, исходя из нужной формы и габаритов.</p>
+          <p>Чтобы оставить заявку, можно позвонить по телефону +7 (495) 991-91-20, заказать обратный звонок, положить выбранный товар в «корзину» или отправить сообщение по электронной почте. Наш менеджер свяжется с вами, чтобы обговорить условия дальнейшего сотрудничества.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer_box">
+          <div class="footer_column">
+            <div class="footer_formask">
+              <div class="formask_title title">Остались вопросы?</div>
+              <div class="formask_subtitle">Заполните форму
+                и мы с радостью Вам поможем!</div>
+              <div class="formask_fields">
+                <input type="text" placeholder="Имя" class="formask_fields-input">
+                <input type="text" placeholder="Телефон" class="formask_fields-input">
+                <input type="submit" value="Отправить" class="formask_fields-btn btn">
+              </div>
+              <div class="formask_polity">Нажимая кнопку отправить, я даю согласие на обработку моих <a href="#">персональных данных</a></div>
+              <div class="footer_navs">
+                <div class="footer_navs-item">
+                  <div class="footer_title">Каталог товаров</div>
+                  <ul class="footer_list">
+                    <li class="footer_item"><a href="№" class="footer_item-link">Срезанные</a></li>
+                    <li class="footer_item"><a href="№" class="footer_item-link">В горшках</a></li>
+                    <li class="footer_item"><a href="№" class="footer_item-link">Аксессуары</a></li>
+                  </ul>
+                </div>
+                <div class="footer_navs-item">
+                  <div class="footer_title">Компания</div>
+                  <ul class="footer_list">
+                    <li class="footer_item"><a href="№" class="footer_item-link">О нас</a></li>
+                    <li class="footer_item"><a href="№" class="footer_item-link">Контакты</a></li>
+                    <li class="footer_item"><a href="№" class="footer_item-link">Новости</a></li>
+                    <li class="footer_item"><a href="№" class="footer_item-link">Доставка и оплата</a></li>
+                    <li class="footer_item"><a href="№" class="footer_item-link">Ёлки оптом</a></li>
+                    <li class="footer_item"><a href="№" class="footer_item-link">Корзина</a></li>
+                    <li class="footer_item"><a href="№" class="footer_item-link">Наш склад</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="formask_who">
+                ИП Кузнецов А.В. <br>
+                Адрес офиса: Москва, Каширское шоссе, дом 148, к.1 офис 309 <br>
+                Тел. <a href="tel:+7 (495) 772-36-33">+7 (495) 772-36-33</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer_column">
+            <a class="logo-link" href="/" >
+              <img class="logo-img" src="images/logo.svg" alt="website logo">
+            </a>
+            <div class="footer_soc-phone">
+              <ul class="social">
+                <li class="social__item">
+                  <a href="#" class="social__link blue" aria-label="Мы во Telegram"><span class="icon-soc_1"></span></a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link purple" aria-label="Мы во Viber"><span class="icon-soc_2"></span></a>
+                </li>
+                <li class="social__item">
+                  <a href="#" class="social__link green" aria-label="Мы в Watsapp"><span class="icon-soc_3"></span></a>
+                </li>
+              </ul>
+              <a href="tel:+7 (495) 772-36-33" class="footer_sphone">+7 (495) 772-36-33</a>
+            </div>
+            <div class="footer_navs">
+              <div class="footer_navs-item">
+                <div class="footer_title">Каталог товаров</div>
+                <ul class="footer_list">
+                  <li class="footer_item"><a href="№" class="footer_item-link">Срезанные</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">В горшках</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">Аксессуары</a></li>
+                </ul>
+              </div>
+              <div class="footer_navs-item">
+                <div class="footer_title">Компания</div>
+                <ul class="footer_list">
+                  <li class="footer_item"><a href="№" class="footer_item-link">О нас</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">Контакты</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">Новости</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">Доставка и оплата</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">Ёлки оптом</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">Корзина</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">Наш склад</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <div class="modalny" id="modal_cart" >
+      <div class="modal-dialog">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕
+        </button>
+        <form class="form_wrapper" action="" method="post">
+          <div class="form_container">
+            <div class="modal_cart-wrapper">
+              <div class="modal_col">
+                <div class="modal_cart-img"><img src="images/modal_cart_add_img_demo2.jpg" alt="" class="responze"></div>
+                <input type="text" class="form_input" placeholder="Имя*">
+                <input type="text" class="form_input" placeholder="E-mail">
+                <input type="text" class="form_input" placeholder="Телефон">
+                <div class="modal_cart-policy">Нажимая кнопку «Отправить», вы соглашаетесь
+                  с <a href="#">Политикой конфиденциальности</a></div>
+              </div>
+              <div class="modal_col">
+                <div class="modal_cart-productbox">
+                  <!-- можно несколько выводить продуктов -->
+                  <div class="modal_cart-product">
+                    <div class="modal_cart-name">Пихта Фразера <span>1.25 - 1.5 м</span></div>
+                    <div class="modal_cart-price"><span>6900</span>₽</div>
+                  </div>
+                </div>
+                <div class="modal_cart-count">
+                  <span class="modal_cart-prop modal_cart-plus" data-quantity="minus" data-field="quantity"><span class="icon-minus"></span></span>
+                  <input type="number" class="form_input-count" name="quantity" value="1" >
+                  <span class="modal_cart-prop modal_cart-minus" data-quantity="plus" data-field="quantity"><span class="icon-plus"></span></span>
+                </div>
+                <div class="modal_cart-totalbox">
+                  <div class="modal_cart-label">Итого:</div>
+                  <div class="modal_cart-total"><span>6 900</span>₽</div>
+                </div>
+                <div class="modal_cart-info">Подробнее о способах <a href="#">доставки и оплаты</a></div>
+                <textarea class="modal_cart-textarea" id="" cols="30" rows="4" placeholder="Комментарий"></textarea>
+                <input type="submit" class="form_btn btn" value="Отправить">
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modalny" id="modal1" >
+      <div class="modal-dialog">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕
+        </button>
+        <form class="form_wrapper" action="" method="post">
+          <div class="form_container">
+            <div class="form_title">Заполните форму<br> и мы свяжемся с вами!</div>
+            <input type="text" class="form_input" placeholder="Имя">
+            <input type="text" class="form_input" placeholder="Телефон">
+            <input type="submit" class="form_btn btn" value="Отправить">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modalny" id="thanksbox" >
+      <div class="modal-dialog">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕
+        </button>
+        <div class="form_wrapper" >
+          <div class="form_container">
+            <div class="thanksbox-title">Спасибо за отправку! <br> Мы Вам перезвоним в ближайшие 5 минут!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modalny" id="modal_cart_add" >
+      <div class="modal-dialog">
+        <button class="close-modal" aria-label="close modal" data-close>
+          ✕
+        </button>
+        <div class="form_wrapper" >
+          <div class="form_container">
+            <div class="form_title">Товар добавлен в корзину!</div>
+            <div class="modal_add-img"><img src="images/modal_cart_add_img_demo1.jpg" alt="" class="responze"></div>
+            <div class="modal_add-name">Пихта Фразера 1.25 - 1.5</div>
+            <a class="modal_add-btn btn" href="/cart.html">Перейти в корзину</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <span class="swiper-scrollbar-drag"></span>
+    <span class="is-visible"></span>
+  </div>
+  </body>
+</html>
