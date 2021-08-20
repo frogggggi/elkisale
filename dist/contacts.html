@@ -44,8 +44,49 @@
             defer
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
     ></script>
+    <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        // Инициализация карты
+        ymaps.ready(init);
 
-</head>
+        function init () {
+            //Центрирование и выбор масштаба карты
+            var myMap = new ymaps.Map('map', {
+                center: [55.595, 37.724],
+                zoom: 15
+            });
+
+            // Создание своей метки
+            var myPlacemark = new ymaps.Placemark(
+                // Координаты метки
+                [55.595410, 37.724382] , {
+                    // Свойства метки
+                    hintContent: 'Мой маркер'                //Подсказка при наведении на маркер
+                }, {
+                    iconImageHref: './images/map-marker.png',  // картинка иконки
+                    iconImageSize: [60, 60],                                      // размеры картинки
+                    iconImageOffset: [-60, -60]                                   // смещение картинки
+                });
+
+            // Добавление метки на карту
+            myMap.geoObjects.add(myPlacemark);
+
+            //Элементы управления
+            myMap.controls
+                // Кнопка изменения масштаба
+                .add('zoomControl')
+                // Список типов карты
+                .add('typeSelector')
+                // Кнопка изменения масштаба - справа
+                .add('smallZoomControl', { right: 5, top: 75 })
+                // Стандартный набор кнопок
+                .add('mapTools')
+                //Линейка масштаба
+                .add(new ymaps.control.ScaleLine());
+        }
+
+    </script>
+<link rel="shortcut icon" href="/assets/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png"><link rel="manifest" href="/assets/manifest.json"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#FFA8A8"><meta name="application-name" content="tris-webpack-boilerplate"><link rel="apple-touch-icon" sizes="57x57" href="/assets/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="167x167" href="/assets/apple-touch-icon-167x167.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-180x180.png"><link rel="apple-touch-icon" sizes="1024x1024" href="/assets/apple-touch-icon-1024x1024.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="tris-webpack-boilerplate"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-640x1136.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-750x1334.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-828x1792.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1125x2436.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1242x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1242x2688.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1536x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1668x2224.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1668x2388.png"><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-2048x2732.png"><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="/assets/apple-touch-startup-image-1620x2160.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-1136x640.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-1334x750.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-1792x828.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2436x1125.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2208x1242.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2688x1242.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2048x1536.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2224x1668.png"><link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2388x1668.png"><link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2732x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="/assets/apple-touch-startup-image-2160x1620.png"><meta name="msapplication-TileColor" content="#fafafa"><meta name="msapplication-TileImage" content="/assets/mstile-144x144.png"><meta name="msapplication-config" content="/assets/browserconfig.xml"><link href="style.1e644ea1324eda509002.css" rel="stylesheet"><script defer src="main.e1bbdfa50b2c9a86a28d.js"></script><script defer src="vendor.082df6408dbf30898941.js"></script><link as="font" crossorigin="anonymous" href="fonts/ProximaNova-Black.woff" rel="preload"><link as="font" crossorigin="anonymous" href="fonts/ProximaNova-Bold.woff" rel="preload"><link as="font" crossorigin="anonymous" href="fonts/ProximaNova-Regular.woff" rel="preload"><link as="font" crossorigin="anonymous" href="fonts/ProximaNova-Semibold.woff" rel="preload"><link as="font" crossorigin="anonymous" href="fonts/icomoon.ttf" rel="preload"><link as="font" crossorigin="anonymous" href="fonts/icomoon.woff" rel="preload"></head>
 
 <body>
 <div class="wrapper">
@@ -146,9 +187,9 @@
     <div class="catalog_filter_block nav_mobile">
         <div class="nav_mobile-wrapper">
             <ul class="sidebar_type">
-                <li><a href="#" class="active"><span class="sidebar_type_icon"><img src="./images/sidebar_type_1.svg" alt=""></span>Срезанные</a></li>
-                <li><a href="#"><span class="sidebar_type_icon"><img src="./images/sidebar_type_2.svg" alt=""></span>В горшках</a></li>
-                <li><a href="#"><span class="sidebar_type_icon"><img src="./images/sidebar_type_3.svg" alt=""></span>Аксессуары</a></li>
+                <li><a href="#" class="active"><span class="sidebar_type_icon"><img src="images/sidebar_type_1.svg" alt=""></span>Срезанные</a></li>
+                <li><a href="#"><span class="sidebar_type_icon"><img src="images/sidebar_type_2.svg" alt=""></span>В горшках</a></li>
+                <li><a href="#"><span class="sidebar_type_icon"><img src="images/sidebar_type_3.svg" alt=""></span>Аксессуары</a></li>
             </ul>
             <div class="sidebar_group">
                 <div class="sidebar-title"><span>Вид дерева</span> <span class="icon-arrow"></span></div>
@@ -205,114 +246,48 @@
         <div class="container">
             <ul class="breadcrumb">
                 <li><a href="/">Главная</a></li>
-                <li><span>Доставка и оплата</span></li>
+                <li><span>Контакты</span></li>
             </ul>
         </div>
     </section>
     <section class="textbox_section">
         <div class="container">
-            <div class="textbox_wrapper textbox_wrapper_delivery">
-                <h1 class="textbox_title title shown_desctop">Доставка и оплата</h1>
-                <div class="textbox_content">
-                    <p>Интернет-магазин Elki.sale привезет новогоднее дерево к вам домой или в офис в любое удобное время. Доставка елок, пихт, сосен осуществляется по территории Москвы и Московской области. Наши курьеры работают ежедневно с 8.00 до 24.00, доставляя заказы на следующий день после оформления.</p>
-                    <h3>Какие варианты доставки елок мы предлагаем?</h3>
-                    <p>Самый простой вариант — выбрать елочку на сайте и оформить заказ. У нас есть несколько безналичных форм оплаты, также можно оплатить товары наличными при получении. Доставка елок осуществляется на следующий день после заказа. Предварительно менеджер согласует с вами время прибытия курьера, тарифы </p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th colspan="2">Доставка новогодних елок по Москве (в пределах МКАД)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Высота дерева</td>
-                                <td>Стоимость</td>
-                            </tr>
-                            <tr>
-                                <td>До 2,75 метров</td>
-                                <td>600 ₽</td>
-                            </tr>
-                            <tr>
-                                <td>2,75 - 3 метра</td>
-                                <td>900 ₽</td>
-                            </tr>
-                            <tr>
-                                <td>3 - 4 метра</td>
-                                <td>2 500 ₽</td>
-                            </tr>
-                            <tr>
-                                <td>Свыше 4 метров</td>
-                                <td>По договоренности</td>
-                            </tr>
-                            <tr>
-                                <td>Подъем на этаж (без лифта)</td>
-                                <td>30 ₽ / этаж</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>Доставка елок по Московской области: от 600 рублей + 30 руб./км.</p>
-                    <p>Стоимость доставки елок 31-го декабря рассчитывается по двойному тарифу.</p>
-                    <p>Еще один вариант — купить елку на нашем складе или на одном из елочных базаров. Осмотрите новогодние деревья и выберите самое красивое, а затем закажите адресную доставку елки. Курьеры отложат товар, а на следующий день привезут вам прямо домой. Это очень удобно: не придется самостоятельно грузить и выгружать деревце, рискуя сломать ветки и поцарапать салон или крышу автомобиля.</p>
-                    <p>Елки не залеживаются у нас на складе. Мы регулярно привозим новые партии живых деревьев из нашего лесного питомника. Заказывая новогоднюю елку с доставкой в компании Elki.sale, вы получите свежее деревце, которое без проблем простоит 2-3 недели, радуя насыщенным цветом хвои и дивным свежим ароматом.</p>
-                    <h3>Установка елок</h3>
-                    <p>Помимо доставки новогодних елок наша компания также предлагает услугу установки. Наши сотрудники подготовят дерево:</p>
-                    <p>- снимут часть коры;</p>
-                    <p>- подпилят торец ствола;</p>
-                    <p>- спилят нижние ветки.</p>
-                    <p>Затем они установят ель, сосну или пихту в подставку. Специалисты позаботятся, чтобы дерево стояло строго вертикально, и, если необходимо, нальют в держатель воду или специальную жидкость, чтобы помочь елочке дольше оставаться зеленой и красивой. Вы сможете сразу же приступить к украшению. Услуга установки особенно актуальна для высоких деревьев, закрепить которые в одиночку будет проблематично.</p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th colspan="2">Установка деревьев</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Высота дерева</td>
-                                <td>Стоимость установки</td>
-                            </tr>
-                            <tr>
-                                <td>До 2 метров</td>
-                                <td>300 ₽</td>
-                            </tr>
-                            <tr>
-                                <td>От 2 до 2,5 м</td>
-                                <td>400 ₽</td>
-                            </tr>
-                            <tr>
-                                <td>От 2,5 до 3 м</td>
-                                <td>800 ₽</td>
-                            </tr>
-                            <tr>
-                                <td>От 3 до 3,5 м</td>
-                                <td>2 500 ₽</td>
-                            </tr>
-                            <tr>
-                                <td>Более 4 м</td>
-                                <td>2 500 ₽</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h3>Почему стоит заказать новогодние елки с доставкой у нас?</h3>
-                    <ol>
-                        <li><span>Красивые деревья из лесного питомника</span>Мы выращиваем елки, сосны, пихты сами, заботясь, чтобы каждому саженцу хватало места и солнца. Именно поэтому они вырастают с идеально симметричной кроной, раскидистыми ветвями, яркой хвоей. Все деревья проходят дополнительную отбраковку перед отправкой на склад. Заказывая у нас елку с доставкой, вы можете не сомневаться, что получите идеальное новогоднее дерево, как с картинки </li>
-                        <li><span>Низкие цены</span>Мы работаем без посредников, поэтому имеем возможность продавать товар стоимости ниже средней по Москве</li>
-                        <li><span>Доставка елок по Москве и области в удобное время</span>Мы привезем ваш заказ уже на следующий день. Опытные курьеры аккуратно погрузят, перевезут и поднимут елочку, позаботившись, чтобы не повредилась ни одна ветка.</li>
-                        <li><span>Большой ассортимент</span>У нас вы найдете елки, сосны, пихты разных сортов. Представлены деревья разной высоты — от миниатюрных вариантов, которые поместятся даже на столе, до четырех-пятиметровых зеленых красавиц. Также мы предлагаем деревья в кадках, которые при правильном уходе не потеряют привлекательного внешнего вида больше 1,5 месяцев</li>
-                        <li><span>Все необходимое — в одном месте</span>В интернет-магазине Elki.sale вы можете заказать не только доставку новогодних елок, но и подставок для них, жидкости, которая увеличит их стойкость, и даже пакетов для утилизации</li>
-                        <li><span>Скидки и подарки</span>Мы регулярно устраиваем выгодные акции, чтобы сделать покупки еще более приятными для наших клиентов</li>
-                    </ol>
-
-
-
-
-
-
-
+            <div class="textbox_wrapper textbox_wrapper_contacts">
+                <h1 class="textbox_title title shown_desctop">Контакты</h1>
+                <div class="contacts_content">
+                    <div class="contacts_col">
+                        <div class="contacts_item contacts_text">
+                            <div class="contacts_item-icon"><span class="icon-text-box"></span></div>
+                            <div class="contacts_item-text">
+                                <p>«Elki.sale»</p>
+                                <p>ИП Кузнецов А.В.</p>
+                                <p>ИНН 500307092830</p>
+                                <p>ОГРН 312500317400050</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contacts_col">
+                        <div class="contacts_item contacts_phone">
+                            <div class="contacts_item-icon"><span class="icon-phone"></span></div>
+                            <div class="contacts_item-text">
+                                <a href="tel:+7 (495) 772-36-33">+7 (495) 772-36-33</a>
+                            </div>
+                        </div>
+                        <div class="contacts_item contacts_map">
+                            <div class="contacts_item-icon"><span class="icon-map-marker"></span></div>
+                            <div class="contacts_item-text">
+                                <p>Адрес офиса: Москва, Каширское шоссе, дом 148, кв.1, офис 309</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div id="map" class="contacts_map"></div>
+                <img src="images/map-marker.png" alt="" class="hidden">
             </div>
         </div>
     </section>
+
+
 
     <footer>
         <div class="container">
@@ -412,7 +387,7 @@
                 <div class="form_container">
                     <div class="modal_cart-wrapper">
                         <div class="modal_col">
-                            <div class="modal_cart-img"><img src="./images/modal_cart_add_img_demo2.jpg" alt="" class="responze"></div>
+                            <div class="modal_cart-img"><img src="images/modal_cart_add_img_demo2.jpg" alt="" class="responze"></div>
                             <input type="text" class="form_input" placeholder="Имя*">
                             <input type="text" class="form_input" placeholder="E-mail">
                             <input type="text" class="form_input" placeholder="Телефон">
@@ -484,7 +459,7 @@
             <div class="form_wrapper" >
                 <div class="form_container">
                     <div class="form_title">Товар добавлен в корзину!</div>
-                    <div class="modal_add-img"><img src="./images/modal_cart_add_img_demo1.jpg" alt="" class="responze"></div>
+                    <div class="modal_add-img"><img src="images/modal_cart_add_img_demo1.jpg" alt="" class="responze"></div>
                     <div class="modal_add-name">Пихта Фразера 1.25 - 1.5</div>
                     <a class="modal_add-btn btn" href="/cart.html">Перейти в корзину</a>
                 </div>

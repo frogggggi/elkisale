@@ -114,7 +114,20 @@ module.exports = {
       inject: 'head',
       minify: false
     }),
-
+    new HtmlWebpackPlugin({
+      title: 'tris-contacts-page',
+      filename: 'contacts.html',
+      template: './src/contacts.html',
+      inject: 'head',
+      minify: false
+    }),
+    new HtmlWebpackPlugin({
+      title: 'tris-cart-page',
+      filename: 'cart.html',
+      template: './src/cart.html',
+      inject: 'head',
+      minify: false
+    }),
     new PreloadWebpackPlugin({
       rel: 'preload',
       as(entry) {
