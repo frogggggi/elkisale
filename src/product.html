@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>webpack boilerplate 📦</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--    <link rel="icon" href="./favicon.ico">-->
+    <meta
+            name="Description"
+            content="A simple yet thorough webpack starter boilerplate for static websites that achieves high performance and cover all best practices."
+    />
+
+    <!-- Open Graph data / Facebook Card data -->
+    <meta property="og:title" content="webpack boilerplate" />
+    <meta property="og:type" content="website" />
+    <meta
+            property="og:url"
+            content="https://github.com/frogggggi/webpack-boilerplate"
+    />
+    <meta property="og:image" content="https://i.imgur.com/lxRBpeb.jpg" />
+    <meta
+            property="og:image:alt"
+            content="A blue package, symbolizing what webpack does."
+    />
+    <meta
+            property="og:description"
+            content="A simple yet thorough webpack starter boilerplate for static websites that achieves high performance and cover all best practices."
+    />
+
+    <!-- Telegram Card data -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@AlexandrIvashc1" />
+
+    <!-- Mobile header color for Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#2c638f" />
+    <!-- Mobile header color Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#2c638f" />
+    <!-- Mobile header color for iOS Safari (supports black, black-translucent or default) -->
+    <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+    />
+    <script
+            defer
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+
+</head>
+
+<body>
+<div class="wrapper">
+    <section class="headline_section">
+        <div class="container">
+            <div class="headline">
+                <a class="logo-link" href="/" >
+                    <img class="logo-img" src="images/logo.svg" alt="website logo" />
+                </a>
+                <div class="mob_burger"><span class="icon-mob_nav"></span></div>
+                <div class="mob_logo_flex">
+                    <a class="logo-mob" href="/" >
+                        <img class="logo-img" src="images/logo_mob.svg" alt="website logo" />
+                    </a>
+                    <a href="tel:+7 (495) 772-36-33" class="phone_mob_logo">+7 (495) 772-36-33</a>
+                </div>
+                <a href="#" class="mob_cart"><span class="icon-cart"><span class="cart_count">1</span></span></a>
+                <div class="headline_item headline_item-auth">
+                    <div class="headline_item headline_item-social">
+                        <ul class="social">
+                            <li class="social__item">
+                                <a href="#" class="social__link blue" aria-label="Мы во Telegram"><span class="icon-soc_1"></span></a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link purple" aria-label="Мы во Viber"><span class="icon-soc_2"></span></a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link green" aria-label="Мы в Watsapp"><span class="icon-soc_3"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="nav_actions-phone" href="tel:+7 (495) 151-10-15">+7 (495) 151-10-15</a>
+                    <button type="button" class="btn nav_actions-btn"  data-open="modal1">Заказать звонок</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <header>
+        <div class="container">
+            <div class="nav">
+                <nav role="navigation" id="access">
+                    <a class="skip-link icon-menu" title="Меню" href=""></a>
+                    <ul id="menu">
+                        <li><a href="#"><span class="icon-catalog"></span>Каталог</a></li>
+                        <li class="spacer"></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li class="spacer"></li>
+                        <li class="active"><a href="#">Ёлки оптом</a></li>
+                        <li class="spacer"></li>
+                        <li><a href="#">Наш склад</a></li>
+                        <li class="spacer"></li>
+                        <li><a href="#">О нас</a></li>
+                        <li class="spacer"></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li class="spacer"></li>
+                        <li><a  data-open="modal_cart"><span class="icon-cart"><span class="cart_count">1</span></span>Корзина</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="nav_mobile nav_mobile_js">
+        <div class="nav_mobile-wrapper">
+            <a class="logo-link_mobile" href="/" >
+                <img class="logo-img_mobile" src="images/logo.svg" alt="website logo" />
+            </a>
+            <nav class="mobile_navi">
+                <a class="skip-link icon-menu" title="Меню" href=""></a>
+                <ul id="menu_mob">
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li class="active"><a href="#">Ёлки оптом</a></li>
+                    <li><a href="#">Наш склад</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Корзина</a></li>
+                </ul>
+            </nav>
+            <div class="nav_mobile_soc-phone">
+                <ul class="social">
+                    <li class="social__item">
+                        <a href="#" class="social__link blue" aria-label="Мы во Telegram"><span class="icon-soc_1"></span></a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link purple" aria-label="Мы во Viber"><span class="icon-soc_2"></span></a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link green" aria-label="Мы в Watsapp"><span class="icon-soc_3"></span></a>
+                    </li>
+                </ul>
+                <a href="tel:+7 (495) 772-36-33" class="nav_mobile_sphone">+7 (495) 772-36-33</a>
+                <a href="#" class="nav_mobile_btn btn">Заказать звонок</a>
+            </div>
+        </div>
+    </div>
+    <div class="close_nav_mobile"><span class="icon-cross"></span></div>
+    <div class="bg_nav_mobile"></div>
+    <div class="catalog_filter_block nav_mobile">
+        <div class="nav_mobile-wrapper">
+            <ul class="sidebar_type">
+                <li><a href="#" class="active"><span class="sidebar_type_icon"><img src="./images/sidebar_type_1.svg" alt=""></span>Срезанные</a></li>
+                <li><a href="#"><span class="sidebar_type_icon"><img src="./images/sidebar_type_2.svg" alt=""></span>В горшках</a></li>
+                <li><a href="#"><span class="sidebar_type_icon"><img src="./images/sidebar_type_3.svg" alt=""></span>Аксессуары</a></li>
+            </ul>
+            <div class="sidebar_group">
+                <div class="sidebar-title"><span>Вид дерева</span> <span class="icon-arrow"></span></div>
+                <div class="sidebar_content">
+                    <div class="sidebar_view-item">
+                        <input type="checkbox" id="view_1" class="sidebar_view-checkbox">
+                        <label for="view_1" class="sidebar_view-label">Пихта</label>
+                    </div>
+                    <div class="sidebar_view-item">
+                        <input type="checkbox" id="view_2" class="sidebar_view-checkbox">
+                        <label for="view_2" class="sidebar_view-label">Ёлка</label>
+                    </div>
+                    <div class="sidebar_view-item">
+                        <input type="checkbox" id="view_3" class="sidebar_view-checkbox">
+                        <label for="view_3" class="sidebar_view-label">Сосна</label>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar_group">
+                <div class="sidebar-title"><span>Цена</span> <span class="icon-arrow"></span></div>
+                <div class="sidebar_content">
+                    <div id="price-slider-range" class="sidebar_price-ranger price-filter-range" name="rangeInput"></div>
+                    <div class="sidebar_price">
+                        <div class="sidebar_price_item">
+                            <span>от</span> <input type="number" value="0" min=0 max="9900" oninput="validity.valid||(value='0');" id="price-min_val" class="sidebar_price_input price-range-field" />
+                        </div>
+                        <div class="sidebar_price_item">
+                            <span>до</span> <input type="number" value="10000" min=0 max="10000" oninput="validity.valid||(value='10000');" id="price-max_val" class="sidebar_price_input price-range-field" />
+                        </div>
+                    </div>
+                    <button class="price-range-search" id="price-range-submit">Search</button>
+                </div>
+            </div>
+            <div class="sidebar_group">
+                <div class="sidebar-title"><span>Высота дерева</span> <span class="icon-arrow"></span></div>
+                <div class="sidebar_content">
+                    <div id="height-slider-range" class="sidebar_price-ranger price-filter-range" name="rangeInput"></div>
+                    <div class="sidebar_price">
+                        <div class="sidebar_price_item">
+                            <span>от</span> <input type="number" value="0" min=0 max="9900" oninput="validity.valid||(value='0');" id="height-min_val" class="sidebar_price_input price-range-field" /> <span>см</span>
+                        </div>
+                        <div class="sidebar_price_item">
+                            <span>до</span> <input type="number" value="1000" min=0 max="10000" oninput="validity.valid||(value='10000');" id="height-max_val" class="sidebar_price_input price-range-field" /> <span>см</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog_filter_btn btn">Применить</div>
+        </div>
+    </div>
+
+    <section class="bcrumb">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/">Каталог</a></li>
+                <li><a href="/">Срезанные</a></li>
+                <li><a href="/">Живые пихты</a></li>
+                <li><a href="/">Пихты Фразера</a></li>
+                <li><a href="/">1 - 1,25 м</a></li>
+                <li><span>Пихта Фразера 1.25 - 1.5 м</span></li>
+            </ul>
+        </div>
+    </section>
+    <section class="product_section">
+        <div class="container">
+            <div class="product_wrapper">
+                <div class="product_title title shown_desctop">Пихта Фразера 1.25 - 1.5 м</div>
+                <div class="product_substars shown_desctop">
+                    <div class="product_subrating">
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star"></span>
+                        <span class="icon-star-half-outline"></span>
+                    </div>
+                    <div class="product_subreviews">6 отзывов</div>
+                </div>
+                <div class="product_contaiter">
+                    <div class="product_slider">
+                        <div class="swiper-container swiper_thumbs swiper_thumbs_js hide_mobile">
+                            <div class="swiper-wrapper product_slider-thumbs">
+                                <div class="swiper-slide">
+                                    <div class="product_slider-item"><img src="./images/product_demo_thumb_1.jpg" alt="" class="responze"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product_slider-item"><img src="./images/product_demo_thumb_1.jpg" alt="" class="responze"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product_slider-item"><img src="./images/product_demo_thumb_1.jpg" alt="" class="responze"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product_slider-item"><img src="./images/product_demo_thumb_1.jpg" alt="" class="responze"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product_slider-item"><img src="./images/product_demo_thumb_1.jpg" alt="" class="responze"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product_slider-item"><img src="./images/product_demo_thumb_1.jpg" alt="" class="responze"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product_slider-item"><img src="./images/product_demo_thumb_1.jpg" alt="" class="responze"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product_slider-item"><img src="./images/product_demo_thumb_1.jpg" alt="" class="responze"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="product_slider-item"><img src="./images/product_demo_thumb_1.jpg" alt="" class="responze"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-containerbox">
+                            <div class="swiper_big-arrpws swiper_big-next shown_mobile"><span class="icon-arrow"></span></div>
+                            <div class="swiper_big-arrpws swiper_big-prev shown_mobile"><span class="icon-arrow"></span></div>
+                            <div class="swiper-container swiper_big swiper_big_js">
+                                <div class="swiper-wrapper product_slider-big">
+                                    <div class="swiper-slide">
+                                        <div class="product_slider-bigitem"><img src="./images/product_demo_big_1.jpg" alt="" class="responze"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product_slider-bigitem"><img src="./images/product_demo_big_1.jpg" alt="" class="responze"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product_slider-bigitem"><img src="./images/product_demo_big_1.jpg" alt="" class="responze"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product_slider-bigitem"><img src="./images/product_demo_big_1.jpg" alt="" class="responze"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product_slider-bigitem"><img src="./images/product_demo_big_1.jpg" alt="" class="responze"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product_slider-bigitem"><img src="./images/product_demo_big_1.jpg" alt="" class="responze"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product_slider-bigitem"><img src="./images/product_demo_big_1.jpg" alt="" class="responze"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product_slider-bigitem"><img src="./images/product_demo_big_1.jpg" alt="" class="responze"></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="product_slider-bigitem"><img src="./images/product_demo_big_1.jpg" alt="" class="responze"></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="product_title title show shown_mobile">Пихта Фразера 1.25 - 1.5 м</div>
+                    <div class="product_substars shown_mobile">
+                        <div class="product_subrating">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star-half-outline"></span>
+                        </div>
+                        <div class="product_subreviews">6 отзывов</div>
+                    </div>
+                    <div class="product_content">
+                        <div class="product_price title">6 900 ₽</div>
+                        <div class="product_descr">
+                            <p>Живая пихта Фразера – великолепное вечнозеленое растение, которое украсит ваш дом на Новый год и Рождество. Миниатюрное новогоднее дерево размером всего 1,25 - 1,5 метра, пышное и миловидное, станет лучшим символом для хорошего настроения.</p>
+                        </div>
+                        <div class="product_countbox">
+                            <div class="product_count">
+                                <div class="modal_cart-count">
+                                    <span class="modal_cart-prop modal_cart-plus" data-quantity="minus" data-field="quantity"><span class="icon-minus"></span></span>
+                                    <input type="number" class="form_input-count" name="quantity" value="1" >
+                                    <span class="modal_cart-prop modal_cart-minus" data-quantity="plus" data-field="quantity"><span class="icon-plus"></span></span>
+                                </div>
+                            </div>
+                            <div class="product_count-total">
+                                <div class="product_count-total-label">Итого:</div>
+                                <div class="product_count-total-value"><span>6 900</span> ₽</div>
+                            </div>
+                        </div>
+                        <div class="product_btns">
+                            <div class="product_incart btn btn_black">В корзину</div>
+                            <div class="product_oneclick btn">Купить в 1 клик</div>
+                        </div>
+                        <div class="product_props-title">Другие размеры</div>
+                        <div class="product_props">
+                            <div class="product_props-item">
+                                <div class="product_props-size">1.25 - 1.5 м</div>
+                                <div class="product_props-price">6 900</div>
+                            </div>
+                            <div class="product_props-item">
+                                <div class="product_props-size">1.5 - 1.75 м</div>
+                                <div class="product_props-price">7 500</div>
+                            </div>
+                            <div class="product_props-item">
+                                <div class="product_props-size">1.75 - 2 м</div>
+                                <div class="product_props-price">9 500</div>
+                            </div>
+                            <div class="product_props-item">
+                                <div class="product_props-size">2 - 2.25 м</div>
+                                <div class="product_props-price">13 500</div>
+                            </div>
+                            <div class="product_props-item">
+                                <div class="product_props-size">2.25 - 2.5 м</div>
+                                <div class="product_props-price">17 400</div>
+                            </div>
+                            <div class="product_props-item">
+                                <div class="product_props-size">2.5 - 2.75 м</div>
+                                <div class="product_props-price">22 400</div>
+                            </div>
+                            <div class="product_props-item">
+                                <div class="product_props-size">2.75 - 3 м</div>
+                                <div class="product_props-price">25 900</div>
+                            </div>
+                            <div class="product_props-item">
+                                <div class="product_props-size">3 - 3.25 м</div>
+                                <div class="product_props-price">37 000</div>
+                            </div>
+                            <div class="product_props-item">
+                                <div class="product_props-size">3.25 - 3.5 м</div>
+                                <div class="product_props-price">39 500</div>
+                            </div>
+                            <div class="product_props-item disabled">
+                                <div class="product_props-size">3.5 - 3.75 м</div>
+                                <div class="product_props-price">45 000 ₽</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="useful_section">
+        <div class="container">
+            <div class="useful_wrapper">
+                <div class="useful_title title">Может пригодиться!</div>
+                <div class="useful_block">
+                    <div class="useful_products">
+                        <div class="useful_item">
+                            <div class="useful_item-img"><img src="./images/useful_item-img_demo.jpg" alt="" class="responze"></div>
+                            <div class="useful_item-wrapper">
+                                <div class="useful_item-price"><span>350 </span>₽</div>
+                                <div class="useful_item-descr">Жидкость для елок Bona Forte</div>
+                            </div>
+                        </div>
+                        <img src="./images/useful_plus.svg" alt="">
+                        <div class="useful_item">
+                            <div class="useful_item-img"><img src="./images/useful_item-img_demo1.jpg" alt="" class="responze"></div>
+                            <div class="useful_item-wrapper">
+                                <div class="useful_item-price"><span>350 </span>₽</div>
+                                <div class="useful_item-descr">Пакет для утилизации ёлки</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="useful_total">
+                        <div class="useful_total-pricebox">
+                            <div class="useful_total-icon"><img src="./images/equals.svg" alt=""></div>
+                            <div class="useful_total-price"><span>700</span> ₽</div>
+                        </div>
+                        <div class="useful_total-btn btn">Купить комплектом</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tabs_section">
+        <div class="container">
+            <div class="tabs_wrapper">
+                <div class="tabs">
+                    <div class="tabs__nav">
+                        <a class="tabs__link tabs__link_active" href="#content-1">Подходящие подставки</a>
+                        <a class="tabs__link" href="#content-2">Доставка и оплата</a>
+                        <a class="tabs__link" href="#content-3">Установка ёлки</a>
+                    </div>
+                    <div class="tabs__content">
+                        <div class="tabs__pane tabs__pane_show suitable_pane" id="content-1">
+                            <div class="suitable_slider-block">
+                                <div class="suitable_slider_arrows suitable-next"><span class="icon-arrow"></span></div>
+                                <div class="suitable_slider_arrows suitable-prev"><span class="icon-arrow"></span></div>
+                                <div class="swiper-container suitable_slider suitable_slider_js">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="suitable_item">
+                                                <div class="suitable_item-img"><img src="./images/suitable_item-img_demo_1.jpg" alt="" class="responze"></div>
+                                                <div class="suitable_item-price">700</div>
+                                                <div class="suitable_item-descr">Подставка под ёлку  «Питер...</div>
+                                                <div class="suitable_item-btn btn">В корзину</div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="suitable_item">
+                                                <div class="suitable_item-img"><img src="./images/suitable_item-img_demo_1.jpg" alt="" class="responze"></div>
+                                                <div class="suitable_item-price">700</div>
+                                                <div class="suitable_item-descr">Подставка под ёлку  «Питер...</div>
+                                                <div class="suitable_item-btn btn">В корзину</div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="suitable_item">
+                                                <div class="suitable_item-img"><img src="./images/suitable_item-img_demo_2.jpg" alt="" class="responze"></div>
+                                                <div class="suitable_item-price">700</div>
+                                                <div class="suitable_item-descr">Подставка под ёлку  «Питер...</div>
+                                                <div class="suitable_item-btn btn">В корзину</div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="suitable_item">
+                                                <div class="suitable_item-img"><img src="./images/suitable_item-img_demo_3.jpg" alt="" class="responze"></div>
+                                                <div class="suitable_item-price">700</div>
+                                                <div class="suitable_item-descr">Подставка под ёлку  «Питер...</div>
+                                                <div class="suitable_item-btn btn">В корзину</div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="suitable_item">
+                                                <div class="suitable_item-img"><img src="./images/suitable_item-img_demo_1.jpg" alt="" class="responze"></div>
+                                                <div class="suitable_item-price">700</div>
+                                                <div class="suitable_item-descr">Подставка под ёлку  «Питер...</div>
+                                                <div class="suitable_item-btn btn">В корзину</div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="suitable_item">
+                                                <div class="suitable_item-img"><img src="./images/suitable_item-img_demo_2.jpg" alt="" class="responze"></div>
+                                                <div class="suitable_item-price">700</div>
+                                                <div class="suitable_item-descr">Подставка под ёлку  «Питер...</div>
+                                                <div class="suitable_item-btn btn">В корзину</div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="suitable_item">
+                                                <div class="suitable_item-img"><img src="./images/suitable_item-img_demo_3.jpg" alt="" class="responze"></div>
+                                                <div class="suitable_item-price">700</div>
+                                                <div class="suitable_item-descr">Подставка под ёлку  «Питер...</div>
+                                                <div class="suitable_item-btn btn">В корзину</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tabs__pane othertabs_pane" id="content-2">
+                            <div class="othertabs-content">
+                                <p>Интернет-магазин Elki.sale привезет новогоднее дерево к вам домой или в офис в любое удобное время. Доставка елок, пихт, сосен осуществляется по территории Москвы и Московской области. Наши курьеры работают ежедневно с 8.00 до 24.00, доставляя заказы на следующий день после оформления.</p>
+                                <p>Самый простой вариант — выбрать елочку на сайте и оформить заказ. У нас есть несколько безналичных форм оплаты, также можно оплатить товары наличными при получении. Доставка елок осуществляется на следующий день после заказа. Предварительно менеджер согласует с вами время прибытия курьера.</p>
+                                <p>Тарифы в интернет-магазине Elki.sale следующие:</p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Доставка новогодних елок по Москве (в пределах МКАД)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Высота дерева</td>
+                                            <td>Стоимость</td>
+                                        </tr>
+                                        <tr>
+                                            <td>До 2,75 метров</td>
+                                            <td>600 ₽</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2,75 - 3 метра</td>
+                                            <td>900 ₽</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3 - 4 метра</td>
+                                            <td>2 500 ₽</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Свыше 4 метров</td>
+                                            <td>По договоренности</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Подъем на этаж (без лифта)</td>
+                                            <td>30 ₽ / этаж</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>Доставка елок по Московской области: от 600 рублей + 30 руб./км.</p>
+                                <p>Стоимость доставки елок 31-го декабря рассчитывается по двойному тарифу.</p>
+                                <p>Еще один вариант — купить елку на нашем складе или на одном из елочных базаров. Осмотрите новогодние деревья и выберите самое красивое, а затем закажите адресную доставку елки. Курьеры отложат товар, а на следующий день привезут вам прямо домой. Это очень удобно: не придется самостоятельно грузить и выгружать деревце, рискуя сломать ветки и поцарапать салон или крышу автомобиля.</p>
+                                <p>Елки не залеживаются у нас на складе. Мы регулярно привозим новые партии живых деревьев из нашего лесного питомника. Заказывая новогоднюю елку с доставкой в компании Elki.sale, вы получите свежее деревце, которое без проблем простоит 2-3 недели, радуя насыщенным цветом хвои и дивным свежим ароматом.</p>
+                            </div>
+                        </div>
+                        <div class="tabs__pane" id="content-3">
+                            <div class="othertabs-content">
+                                <p>Помимо доставки новогодних елок наша компания также предлагает услугу установки.</p>
+                                <p>Наши сотрудники подготовят дерево:</p>
+                                <p>- снимут часть коры;</p>
+                                <p>- подпилят торец ствола;</p>
+                                <p>- спилят нижние ветки.</p>
+                                <p>Затем они установят ель, сосну или пихту в подставку. Специалисты позаботятся, чтобы дерево стояло строго вертикально, и, если необходимо, нальют в держатель воду или специальную жидкость, чтобы помочь елочке дольше оставаться зеленой и красивой. Вы сможете сразу же приступить к украшению. Услуга установки особенно актуальна для высоких деревьев, закрепить которые в одиночку будет проблематично.</p>
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th colspan="2">Установка деревьев</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Высота дерева</td>
+                                        <td>Стоимость установки</td>
+                                    </tr>
+                                    <tr>
+                                        <td>До 2 метров</td>
+                                        <td>300 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>От 2 до 2,5 м</td>
+                                        <td>400 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>От 2,5 до 3 м</td>
+                                        <td>800 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>От 3 до 3,5 м</td>
+                                        <td>2 500 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Более 4 м</td>
+                                        <td>2 500 ₽</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews_section">
+        <div class="container">
+            <div class="reviews_wrapper">
+                <div class="reviews_title title">Отзывы о товаре</div>
+                <div class="reviews_userphotos-title">Фотографии покупателей</div>
+                <div class="reviews_userphotos-wrapper">
+                    <div class="reviews_userphotos">
+                        <div class="reviews_slider_arrows reviews_userphotos-next"><span class="icon-arrow"></span></div>
+                        <div class="reviews_slider_arrows reviews_userphotos-prev"><span class="icon-arrow"></span></div>
+                        <div class="swiper-container reviews_userphotos_js">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="userphotos_item-img"><img src="./images/userphotos_item-img_demo1.jpg" alt="" class="responze"> </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="userphotos_item-img"><img src="./images/userphotos_item-img_demo2.jpg" alt="" class="responze"> </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="userphotos_item-img"><img src="./images/userphotos_item-img_demo3.jpg" alt="" class="responze"> </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="userphotos_item-img"><img src="./images/userphotos_item-img_demo4.jpg" alt="" class="responze"> </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="userphotos_item-img"><img src="./images/userphotos_item-img_demo1.jpg" alt="" class="responze"> </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="userphotos_item-img"><img src="./images/userphotos_item-img_demo2.jpg" alt="" class="responze"> </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="userphotos_item-img"><img src="./images/userphotos_item-img_demo3.jpg" alt="" class="responze"> </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="userphotos_item-img"><img src="./images/userphotos_item-img_demo4.jpg" alt="" class="responze"> </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews_block">
+                    <div class="reviews_list">
+                        <div class="reviews_item">
+                            <div class="reviews_item-name_star">
+                                <div class="reviews_item-name">Михаил П.</div>
+                                <div class="reviews_item-star">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                </div>
+                            </div>
+                            <div class="reviews_item-descr">
+                                <p>Богатый ассортимент по видам хвойных и размеру, качественное обслуживание, своевременная доставка и установка.</p>
+                                <p>Абсолютно довольна! Очень рекомендую!</p>
+                            </div>
+                            <div class="reviews_item-files">
+                                <div class="reviews_item-files-img"><img src="./images/reviews_item-files-img_demo1.jpg" alt="" class="responze"></div>
+                                <div class="reviews_item-files-img"><img src="./images/reviews_item-files-img_demo2.jpg" alt="" class="responze"></div>
+                            </div>
+                            <div class="reviews_item-date">28.12.2020</div>
+                        </div>
+                        <div class="reviews_item">
+                            <div class="reviews_item-name_star">
+                                <div class="reviews_item-name">Алина Г.</div>
+                                <div class="reviews_item-star">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star-outline"></span>
+                                </div>
+                            </div>
+                            <div class="reviews_item-descr">
+                                <p>Заказывала русскую ёлку в 2016 году. Осталась очень довольна: привезли быстро, установили. Елочка оказалась стройная, свежая, стояла до Крещения, не осыпалась. Буду рекомендовать друзьям приобретать ёлки тут. Спасибо!</p>
+                                <p>Хорошая ёлочка - залог прекрасного новогоднего настроения!</p>
+                            </div>
+                            <div class="reviews_item-files">
+                                <div class="reviews_item-files-img"><img src="./images/reviews_item-files-img_demo3.jpg" alt="" class="responze"></div>
+                            </div>
+                            <div class="reviews_item-date">28.12.2020</div>
+                        </div>
+                        <div class="reviews_item">
+                            <div class="reviews_item-name_star">
+                                <div class="reviews_item-name">Михаил П.</div>
+                                <div class="reviews_item-star">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                </div>
+                            </div>
+                            <div class="reviews_item-descr">
+                                <p>Богатый ассортимент по видам хвойных и размеру, качественное обслуживание, своевременная доставка и установка.</p>
+                                <p>Абсолютно довольна! Очень рекомендую!</p>
+                            </div>
+                            <div class="reviews_item-files">
+                                <div class="reviews_item-files-img"><img src="./images/reviews_item-files-img_demo4.jpg" alt="" class="responze"></div>
+                            </div>
+                            <div class="reviews_item-date">28.12.2020</div>
+                        </div>
+                        <div class="reviews_list-btn btn btn_black"><span class="icon-replay"></span>Показать больше отзывов</div>
+                    </div>
+                    <div class="reviews_sendform">
+                        <div class="reviews_sendform_wrapper">
+                            <div class="reviews_sendform-allrate">Общий рейтинг покупателей:</div>
+                            <div class="reviews_sendform-allnums">4,75 / 5</div>
+                            <div class="reviews_sendform-allstars">
+                                <span class="icon-star"></span>
+                                <span class="icon-star"></span>
+                                <span class="icon-star"></span>
+                                <span class="icon-star"></span>
+                                <span class="icon-star-half-outline"></span>
+                            </div>
+                            <div class="reviews_sendform-title">Поделитесь своим мнением</div>
+                            <div class="reviews_sendform-label">Оцените покупку*</div>
+                            <div class="reviews_sendform-stars">
+                                <span class="icon-star-outline"></span>
+                                <span class="icon-star-outline"></span>
+                                <span class="icon-star-outline"></span>
+                                <span class="icon-star-outline"></span>
+                                <span class="icon-star-outline"></span>
+                            </div>
+                            <div class="reviews_sendform-label">Поделитесь впечатлением о товаре</div>
+                            <textarea class="reviews_sendform-textarea" id="sendform-textarea" cols="30" rows="3" placeholder="Здесь вы можете написать свой отзыв"></textarea>
+                            <div class="reviews_addphoto">
+                                <div class="reviews_addphoto-title">Добавьте фотографии</div>
+                                <div class="reviews_addphoto-box">
+                                    <div class="reviews_addphoto-item addphoto-item-bg"><span class="icon-addphoto"></span></div>
+                                    <div class="reviews_addphoto-item"></div>
+                                    <div class="reviews_addphoto-item"></div>
+                                    <div class="reviews_addphoto-item"></div>
+                                </div>
+                                <div class="reviews_addphoto-btn btn">Отправить отзыв</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer_box">
+                <div class="footer_column">
+                    <div class="footer_formask">
+                        <div class="formask_title title">Остались вопросы?</div>
+                        <div class="formask_subtitle">Заполните форму
+                            и мы с радостью Вам поможем!</div>
+                        <div class="formask_fields">
+                            <input type="text" placeholder="Имя" class="formask_fields-input">
+                            <input type="text" placeholder="Телефон" class="formask_fields-input">
+                            <input type="submit" value="Отправить" class="formask_fields-btn btn">
+                        </div>
+                        <div class="formask_polity">Нажимая кнопку отправить, я даю согласие на обработку моих <a href="#">персональных данных</a></div>
+                        <div class="footer_navs">
+                            <div class="footer_navs-item">
+                                <div class="footer_title">Каталог товаров</div>
+                                <ul class="footer_list">
+                                    <li class="footer_item"><a href="№" class="footer_item-link">Срезанные</a></li>
+                                    <li class="footer_item"><a href="№" class="footer_item-link">В горшках</a></li>
+                                    <li class="footer_item"><a href="№" class="footer_item-link">Аксессуары</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_navs-item">
+                                <div class="footer_title">Компания</div>
+                                <ul class="footer_list">
+                                    <li class="footer_item"><a href="№" class="footer_item-link">О нас</a></li>
+                                    <li class="footer_item"><a href="№" class="footer_item-link">Контакты</a></li>
+                                    <li class="footer_item"><a href="№" class="footer_item-link">Новости</a></li>
+                                    <li class="footer_item"><a href="№" class="footer_item-link">Доставка и оплата</a></li>
+                                    <li class="footer_item"><a href="№" class="footer_item-link">Ёлки оптом</a></li>
+                                    <li class="footer_item"><a href="№" class="footer_item-link">Корзина</a></li>
+                                    <li class="footer_item"><a href="№" class="footer_item-link">Наш склад</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="formask_who">
+                            ИП Кузнецов А.В. <br>
+                            Адрес офиса: Москва, Каширское шоссе, дом 148, к.1 офис 309 <br>
+                            Тел. <a href="tel:+7 (495) 772-36-33">+7 (495) 772-36-33</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_column">
+                    <a class="logo-link" href="/" >
+                        <img class="logo-img" src="images/logo.svg" alt="website logo">
+                    </a>
+                    <div class="footer_soc-phone">
+                        <ul class="social">
+                            <li class="social__item">
+                                <a href="#" class="social__link blue" aria-label="Мы во Telegram"><span class="icon-soc_1"></span></a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link purple" aria-label="Мы во Viber"><span class="icon-soc_2"></span></a>
+                            </li>
+                            <li class="social__item">
+                                <a href="#" class="social__link green" aria-label="Мы в Watsapp"><span class="icon-soc_3"></span></a>
+                            </li>
+                        </ul>
+                        <a href="tel:+7 (495) 772-36-33" class="footer_sphone">+7 (495) 772-36-33</a>
+                    </div>
+                    <div class="footer_navs">
+                        <div class="footer_navs-item">
+                            <div class="footer_title">Каталог товаров</div>
+                            <ul class="footer_list">
+                                <li class="footer_item"><a href="№" class="footer_item-link">Срезанные</a></li>
+                                <li class="footer_item"><a href="№" class="footer_item-link">В горшках</a></li>
+                                <li class="footer_item"><a href="№" class="footer_item-link">Аксессуары</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer_navs-item">
+                            <div class="footer_title">Компания</div>
+                            <ul class="footer_list">
+                                <li class="footer_item"><a href="№" class="footer_item-link">О нас</a></li>
+                                <li class="footer_item"><a href="№" class="footer_item-link">Контакты</a></li>
+                                <li class="footer_item"><a href="№" class="footer_item-link">Новости</a></li>
+                                <li class="footer_item"><a href="№" class="footer_item-link">Доставка и оплата</a></li>
+                                <li class="footer_item"><a href="№" class="footer_item-link">Ёлки оптом</a></li>
+                                <li class="footer_item"><a href="№" class="footer_item-link">Корзина</a></li>
+                                <li class="footer_item"><a href="№" class="footer_item-link">Наш склад</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <div class="modalny" id="modal_cart" >
+        <div class="modal-dialog">
+            <button class="close-modal" aria-label="close modal" data-close>
+                ✕
+            </button>
+            <form class="form_wrapper" action="" method="post">
+                <div class="form_container">
+                    <div class="modal_cart-wrapper">
+                        <div class="modal_col">
+                            <div class="modal_cart-img"><img src="./images/modal_cart_add_img_demo2.jpg" alt="" class="responze"></div>
+                            <input type="text" class="form_input" placeholder="Имя*">
+                            <input type="text" class="form_input" placeholder="E-mail">
+                            <input type="text" class="form_input" placeholder="Телефон">
+                            <div class="modal_cart-policy">Нажимая кнопку «Отправить», вы соглашаетесь
+                                с <a href="#">Политикой конфиденциальности</a></div>
+                        </div>
+                        <div class="modal_col">
+                            <div class="modal_cart-productbox">
+                                <!-- можно несколько выводить продуктов -->
+                                <div class="modal_cart-product">
+                                    <div class="modal_cart-name">Пихта Фразера <span>1.25 - 1.5 м</span></div>
+                                    <div class="modal_cart-price"><span>6900</span>₽</div>
+                                </div>
+                            </div>
+                            <div class="modal_cart-count">
+                                <span class="modal_cart-prop modal_cart-plus" data-quantity="minus" data-field="quantity_pid"><span class="icon-minus"></span></span>
+                                <input type="number" class="form_input-count" name="quantity_pid" value="1" >
+                                <span class="modal_cart-prop modal_cart-minus" data-quantity="plus" data-field="quantity_pid"><span class="icon-plus"></span></span>
+                            </div>
+                            <div class="modal_cart-totalbox">
+                                <div class="modal_cart-label">Итого:</div>
+                                <div class="modal_cart-total"><span>6 900</span>₽</div>
+                            </div>
+                            <div class="modal_cart-info">Подробнее о способах <a href="#">доставки и оплаты</a></div>
+                            <textarea class="modal_cart-textarea" id="" cols="30" rows="4" placeholder="Комментарий"></textarea>
+                            <input type="submit" class="form_btn btn" value="Отправить">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modalny" id="modal1" >
+        <div class="modal-dialog">
+            <button class="close-modal" aria-label="close modal" data-close>
+                ✕
+            </button>
+            <form class="form_wrapper" action="" method="post">
+                <div class="form_container">
+                    <div class="form_title">Заполните форму<br> и мы свяжемся с вами!</div>
+                    <input type="text" class="form_input" placeholder="Имя">
+                    <input type="text" class="form_input" placeholder="Телефон">
+                    <input type="submit" class="form_btn btn" value="Отправить">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modalny" id="thanksbox" >
+        <div class="modal-dialog">
+            <button class="close-modal" aria-label="close modal" data-close>
+                ✕
+            </button>
+            <div class="form_wrapper" >
+                <div class="form_container">
+                    <div class="thanksbox-title">Спасибо за отправку! <br> Мы Вам перезвоним в ближайшие 5 минут!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modalny" id="modal_cart_add" >
+        <div class="modal-dialog">
+            <button class="close-modal" aria-label="close modal" data-close>
+                ✕
+            </button>
+            <div class="form_wrapper" >
+                <div class="form_container">
+                    <div class="form_title">Товар добавлен в корзину!</div>
+                    <div class="modal_add-img"><img src="./images/modal_cart_add_img_demo1.jpg" alt="" class="responze"></div>
+                    <div class="modal_add-name">Пихта Фразера 1.25 - 1.5</div>
+                    <a class="modal_add-btn btn" href="/cart.html">Перейти в корзину</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span class="swiper-scrollbar-drag"></span>
+    <span class="is-visible"></span>
+</div>
+</body>
+</html>

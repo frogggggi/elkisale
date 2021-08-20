@@ -49,308 +49,371 @@
 
 <body>
 <div class="wrapper">
+  <section class="headline_section">
+    <div class="container">
+      <div class="headline">
+        <a class="logo-link" href="/" >
+          <img class="logo-img" src="images/logo.svg" alt="website logo" />
+        </a>
+        <div class="mob_burger"><span class="icon-mob_nav"></span></div>
+        <div class="mob_logo_flex">
+          <a class="logo-mob" href="/" >
+            <img class="logo-img" src="images/logo_mob.svg" alt="website logo" />
+          </a>
+          <a href="tel:+7 (495) 772-36-33" class="phone_mob_logo">+7 (495) 772-36-33</a>
+        </div>
+        <a href="#" class="mob_cart"><span class="icon-cart"><span class="cart_count">1</span></span></a>
+        <div class="headline_item headline_item-auth">
+          <div class="headline_item headline_item-social">
+            <ul class="social">
+              <li class="social__item">
+                <a href="#" class="social__link blue" aria-label="Мы во Telegram"><span class="icon-soc_1"></span></a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link purple" aria-label="Мы во Viber"><span class="icon-soc_2"></span></a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link green" aria-label="Мы в Watsapp"><span class="icon-soc_3"></span></a>
+              </li>
+            </ul>
+          </div>
+          <a class="nav_actions-phone" href="tel:+7 (495) 151-10-15">+7 (495) 151-10-15</a>
+          <button type="button" class="btn nav_actions-btn"  data-open="modal1">Заказать звонок</button>
+        </div>
+      </div>
+    </div>
+  </section>
   <header>
     <div class="container">
       <div class="nav">
-        <a class="logo-link" href="/" aria-label="Геонавтика">
-          <img class="logo-img" src="./images/logo.svg" alt="website logo" />
-        </a>
-        <a class="nav_actions-phone show_mobile" href="tel:+7 (495) 151-10-15">+7 (495) 151-10-15</a>
         <nav role="navigation" id="access">
           <a class="skip-link icon-menu" title="Меню" href=""></a>
           <ul id="menu">
-            <li><a href="#home" class="active">Главная</a></li>
-            <li><a href="services.html">Услуги</a></li>
-            <li><a href="about.html">О компании</a></li>
-            <li><a href="reviews.html">Портфолио</a></li>
-            <li><a href="works.html">База знаний <span class="icon-geowiki"><span class="path1"></span><span class="path2"></span></span></a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="#"><span class="icon-catalog"></span>Каталог</a></li>
+            <li class="spacer"></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li class="spacer"></li>
+            <li class="active"><a href="#">Ёлки оптом</a></li>
+            <li class="spacer"></li>
+            <li><a href="#">Наш склад</a></li>
+            <li class="spacer"></li>
+            <li><a href="#">О нас</a></li>
+            <li class="spacer"></li>
+            <li><a href="#">Контакты</a></li>
+            <li class="spacer"></li>
+            <li><a  data-open="modal_cart"><span class="icon-cart"><span class="cart_count">1</span></span>Корзина</a></li>
           </ul>
         </nav>
-        <div class='nav_actions'>
-          <a class="nav_actions-phone" href="tel:+7 012 354 56 32"><span class="icon-phone_icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span></span>+7 012 354 56 32</a>
-          <a class="nav_actions-plus btn_vsicon" href="#"><span class="icon-plus"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>Расчитать стоимость</a>
-          <button type="button" class="btn nav_actions-btn"  data-open="modal1">Перезвонить мне</button>
-        </div>
-      </div>
-      <div class='nav_mobile'>
-        <a class="logo-link_mobile" href="/" >
-          <img class="logo-img_mobile" src="./images/logo.svg" alt="website logo" />
-        </a>
-        <a class="skip-link_mobile icon-close" title="Меню" href=""></a>
-        <div class='nav_actions nav_actions_mobile'>
-          <a class="nav_actions-phone" href="tel:+7 012 354 56 32">+7 012 354 56 32</a>
-        </div>
-        <nav role="navigation" >
-          <ul id="menu_mobile">
-            <li class="active"><a href="#home">Главная</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#about">О компании</a></li>
-            <li><a href="#reviews">Портфолио</a></li>
-            <li><a href="#tasks">База знаний <span class="icon-geowiki"><span class="path1"></span><span class="path2"></span></span></a></li>
-            <li><a href="#contact">Контакты</a></li>
-          </ul>
-        </nav>
-        <div class='headline_item headline_item-social'>
-          <div class='headline_item-socialtext'>Мы в социальных сетях:</div>
-          <ul class="social">
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="Мы во Инстаграме"><span class="icon-insta"></span></a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="Мы во Telegram"><span class="icon-telega"></span></a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="Мы в Socmedia"><span class="icon-socmedia"></span></a>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   </header>
-  <section class='about_section'>
-    <div class='container'>
-      <div class='about_content'>
-        <div class='about_col'>
-          <div class='serdet_title title'>О компании</div>
-          <div class='serdet_text'>На сегодняшний день мы работаем в геодезическое сфере, в том числе с применением беспилотных летательных аппаратов, оказываем геологические и экологические услуги на территории всей России. Мы сотрудничаем с горными инженерами, землеустроительными компаниями, судебными экспертами, ландшафтными дизайнерами и всегда готовы помочь нашим клиентам с решением задач любой сложности.</div>
-        </div>
-        <div class='about_col'>
-          <div class='about_img'><img src="./images/logo-about.svg" alt="" class="responze"></div>
-        </div>
+  <div class="nav_mobile nav_mobile_js">
+    <div class="nav_mobile-wrapper">
+      <a class="logo-link_mobile" href="/" >
+        <img class="logo-img_mobile" src="images/logo.svg" alt="website logo" />
+      </a>
+      <nav class="mobile_navi">
+        <a class="skip-link icon-menu" title="Меню" href=""></a>
+        <ul id="menu_mob">
+          <li><a href="#">Каталог</a></li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li class="active"><a href="#">Ёлки оптом</a></li>
+          <li><a href="#">Наш склад</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Корзина</a></li>
+        </ul>
+      </nav>
+      <div class="nav_mobile_soc-phone">
+        <ul class="social">
+          <li class="social__item">
+            <a href="#" class="social__link blue" aria-label="Мы во Telegram"><span class="icon-soc_1"></span></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link purple" aria-label="Мы во Viber"><span class="icon-soc_2"></span></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link green" aria-label="Мы в Watsapp"><span class="icon-soc_3"></span></a>
+          </li>
+        </ul>
+        <a href="tel:+7 (495) 772-36-33" class="nav_mobile_sphone">+7 (495) 772-36-33</a>
+        <a href="#" class="nav_mobile_btn btn">Заказать звонок</a>
       </div>
     </div>
-  </section>
-  <section class='aboutdesc_section'>
-    <div class='container'>
-      <div class="aboutdesc_bg">О НАС</div>
-      <li class='aboutdesc_content'>
-        <div class='aboutdesc_col'>
-          <div class='aboutdesc_img'><img src="./images/about_desc_img.jpg" alt="" class="responze"></div>
-        </div>
-        <div class='aboutdesc_col aboutdesc_descr'>
-          <h3>Преимущества работы с нами:</h3>
-          <ul>
-            <li>Наличие разрешений на изыскания и СРО;</li>
-            <li>Маркшейдерская лицензия;</li>
-            <li>Собственный парк оборудования;</li>
-            <li>Специалисты с опытом работы более 20 лет;</li>
-          </ul>
-          <p>В штате организации есть специалисты с аттестатами кадастровых инженеров для проведения землеустроительных работ по постановке на учет земель и зданий. Наша компания имеет маркшейдерскую лицензию для выполнения изысканий на горных предприятиях. Современное оборудование, используемое в работе, проходит регулярные поверки, каждый беспилотник имеет регистрационный номер Росавиации.</p>
-          <p>Сотрудники "Геонафтики" имеют высокую квалификацию и необходимые сертификаты, подтверждающие уровень знаний.</p>
+  </div>
+  <div class="close_nav_mobile"><span class="icon-cross"></span></div>
+  <div class="bg_nav_mobile"></div>
+  <div class="catalog_filter_block nav_mobile">
+    <div class="nav_mobile-wrapper">
+      <ul class="sidebar_type">
+        <li><a href="#" class="active"><span class="sidebar_type_icon"><img src="./images/sidebar_type_1.svg" alt=""></span>Срезанные</a></li>
+        <li><a href="#"><span class="sidebar_type_icon"><img src="./images/sidebar_type_2.svg" alt=""></span>В горшках</a></li>
+        <li><a href="#"><span class="sidebar_type_icon"><img src="./images/sidebar_type_3.svg" alt=""></span>Аксессуары</a></li>
+      </ul>
+      <div class="sidebar_group">
+        <div class="sidebar-title"><span>Вид дерева</span> <span class="icon-arrow"></span></div>
+        <div class="sidebar_content">
+          <div class="sidebar_view-item">
+            <input type="checkbox" id="view_1" class="sidebar_view-checkbox">
+            <label for="view_1" class="sidebar_view-label">Пихта</label>
+          </div>
+          <div class="sidebar_view-item">
+            <input type="checkbox" id="view_2" class="sidebar_view-checkbox">
+            <label for="view_2" class="sidebar_view-label">Ёлка</label>
+          </div>
+          <div class="sidebar_view-item">
+            <input type="checkbox" id="view_3" class="sidebar_view-checkbox">
+            <label for="view_3" class="sidebar_view-label">Сосна</label>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="calc_section about_video_section">
-    <div class="container">
-      <div class="mainslider_bg">ВЫСТАВКИ</div>
-      <div class="calc_wrapper">
-        <div class="calc_title title">Сервис Геонафтика на выставке MiningWorld Russia</div>
-        <div class="video_wrapper calc_img"><img src="images/about_video_img.jpg" alt="" class="responze"></div>
+      <div class="sidebar_group">
+        <div class="sidebar-title"><span>Цена</span> <span class="icon-arrow"></span></div>
+        <div class="sidebar_content">
+          <div id="price-slider-range" class="sidebar_price-ranger price-filter-range" name="rangeInput"></div>
+          <div class="sidebar_price">
+            <div class="sidebar_price_item">
+              <span>от</span> <input type="number" value="0" min=0 max="9900" oninput="validity.valid||(value='0');" id="price-min_val" class="sidebar_price_input price-range-field" />
+            </div>
+            <div class="sidebar_price_item">
+              <span>до</span> <input type="number" value="10000" min=0 max="10000" oninput="validity.valid||(value='10000');" id="price-max_val" class="sidebar_price_input price-range-field" />
+            </div>
+          </div>
+          <button class="price-range-search" id="price-range-submit">Search</button>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class='company_section'>
-    <div class='container'>
-     <div class='carousell'>
-       <div class="mainslider_bg">СЕРТИФИКАТЫ</div>
-        <div class='carousell_title title'>Сертификаты</div>
-        <div class='carousell_subtitle'>Документация которая подтверждает наш профессионализм</div>
-
-        <div class='carousell_box swiper-container carousell_slider'>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class='carousell_item '>
-                <div class='carousell_link'>
-                  <a href="./images/document1.jpg" class='carousell_image '>
-                    <img src="./images/document1.jpg" alt="" class="responze">
-                  </a>
-                </div>
-              </div>
+      <div class="sidebar_group">
+        <div class="sidebar-title"><span>Высота дерева</span> <span class="icon-arrow"></span></div>
+        <div class="sidebar_content">
+          <div id="height-slider-range" class="sidebar_price-ranger price-filter-range" name="rangeInput"></div>
+          <div class="sidebar_price">
+            <div class="sidebar_price_item">
+              <span>от</span> <input type="number" value="0" min=0 max="9900" oninput="validity.valid||(value='0');" id="height-min_val" class="sidebar_price_input price-range-field" /> <span>см</span>
             </div>
-            <div class="swiper-slide">
-              <div class='carousell_item '>
-                <div class='carousell_link'>
-                  <a href="./images/document1.jpg" class='carousell_image '>
-                    <img src="./images/document1.jpg" alt="" class="responze">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class='carousell_item '>
-                <div class='carousell_link'>
-                  <a href="./images/document1.jpg" class='carousell_image '>
-                    <img src="./images/document1.jpg" alt="" class="responze">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class='carousell_item '>
-                <div class='carousell_link'>
-                  <a href="./images/document1.jpg" class='carousell_image '>
-                    <img src="./images/document1.jpg" alt="" class="responze">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class='carousell_item '>
-                <div class='carousell_link'>
-                  <a href="./images/document1.jpg" class='carousell_image '>
-                    <img src="./images/document1.jpg" alt="" class="responze">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class='carousell_item '>
-                <div class='carousell_link'>
-                  <a href="./images/document1.jpg" class='carousell_image '>
-                    <img src="./images/document1.jpg" alt="" class="responze">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class='carousell_item '>
-                <div class='carousell_link'>
-                  <a href="./images/document1.jpg" class='carousell_image '>
-                    <img src="./images/document1.jpg" alt="" class="responze">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class='carousell_item '>
-                <div class='carousell_link'>
-                  <a href="./images/document1.jpg" class='carousell_image '>
-                    <img src="./images/document1.jpg" alt="" class="responze">
-                  </a>
-                </div>
-              </div>
+            <div class="sidebar_price_item">
+              <span>до</span> <input type="number" value="1000" min=0 max="10000" oninput="validity.valid||(value='10000');" id="height-max_val" class="sidebar_price_input price-range-field" /> <span>см</span>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="catalog_filter_btn btn">Применить</div>
     </div>
-  </section>
+  </div>
 
-
-  <section class="consultation">
+  <section class="bcrumb">
     <div class="container">
-      <form class="form_wrapper" action="" method="post">
-        <div class="form_container">
-          <div class="form_titlebox">
-            <div class="form_title">Остались вопросы ?</div>
-            <div class="form_descr">Напишите нам и мы свяжемся с Вами в течении 5 минут!</div>
-          </div>
-          <label><span>Ваше имя</span><input class="form_input" placeholder="Как Вас зовут?"></label>
-          <label><span>Номер телефона</span></sp><input class="form_input" placeholder="+7 (999) 999-99-99"></label>
-          <input type="submit" class="form_btn btn" value="Отправить">
-        </div>
-      </form>
+      <ul class="breadcrumb">
+        <li><a href="/">Главная</a></li>
+        <li><span>О нас</span></li>
+      </ul>
     </div>
-
   </section>
+  <section class="textbox_section">
+    <div class="container">
+      <div class="textbox_wrapper">
+        <h1 class="textbox_title title shown_desctop">О нас</h1>
+        <div class="textbox_content">
+          <p>«Elki.sale», впервые появившись на столичном рынке в 2005 году, в 2016 году считаются лучшей из всех компаний, специализирующихся на выращивании и продаже новогодних деревьев премиум-класса.</p>
+          <p>«Elki.sale» работает абсолютно без посредников. Все деревья поставляются исключительно в сезон, перед новогодними праздниками. Взамен срезанным и выкопанных деревьев в обязательном порядке высаживаются молодые.</p>
+          <p>Заказать любое новогоднее дерево для своего дома или офиса Вы можете прямо сейчас по этому номеру телефона: +7 (495) 991-91-20.</p>
+          <p>Счастливого Нового Года!</p>
+          <div class="video_bg"><span class="icon-play_in"></span><img src="./images/video_bg.jpg" alt="" class="responze"></div>
+          <h3>Живые елки из питомника от интернет-магазина https://elki.sale/</h3>
+          <ol>
+            <li><b>Собственный питомник</b>, в котором все деревья выращиваются без применения вредных синтетических подкормов.</li>
+            <li>Огромный <b>склад живой продукции</b>, куда можно приехать и выбрать новогоднее дерево лично</li>
+            <li>Возможность приобрести <b>новогодние деревья оптом</b> без посредников по выгодным ценам</li>
+            <li><b>Быстрая доставка</b> на любой указанный адрес</li>
+            <li>Большой <b>выбор новогодних деревьев</b> в горшках, с абсолютно нетронутой корневой системой.</li>
+            <li>Дополнительные <b>услуги по монтажу и вывозу новогодних ёлок</b> после праздничных каникул</li>
+            <li><b>Наличие сертификатов cоответствия</b> на всю продукцию, что гарантирует экологическую чистоту и безопасность каждого деревца</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <div class='container'>
-      <div class='footer_box'>
-        <div class='footer_column'>
-          <a href='/' class='footer_logo'>
-            <img src='./images/logo-footer.svg' alt='' class='footer_img responze'>
-          </a>
-          <ul class="social">
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="Мы во Инстаграме"><span class="icon-insta"><span class="path1"></span><span class="path2"></span></span></a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="Мы во Telegram"><span class="icon-telega"><span class="path1"></span><span class="path2"></span></span></a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="Мы в Socmedia"><span class="icon-socmedia"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span></span></a>
-            </li>
-          </ul>
-          <div class='footer_flex show_mobile'>
-            <div class='footer_fl'>Быстрая бесплатная консультация -
-              <a href='tel:+7 (495) 151-10-15' class='footer_flex-phone'>+7 (495) 151-10-15</a>
+    <div class="container">
+      <div class="footer_box">
+        <div class="footer_column">
+          <div class="footer_formask">
+            <div class="formask_title title">Остались вопросы?</div>
+            <div class="formask_subtitle">Заполните форму
+              и мы с радостью Вам поможем!</div>
+            <div class="formask_fields">
+              <input type="text" placeholder="Имя" class="formask_fields-input">
+              <input type="text" placeholder="Телефон" class="formask_fields-input">
+              <input type="submit" value="Отправить" class="formask_fields-btn btn">
             </div>
-            <button type="button" class="footer_fr btn"  data-open="modal1">Обратный звонок</button>
-          </div>
-          <a href='#' class='footer_link'>Политика конфиденциальности сайта</a>
-          <a href='#' class='footer_link'>Правила использования ресурса</a>
-        </div>
-        <div class='footer_column'>
-          <div class='footer_title'>Навигация</div>
-          <ul class='footer_list'>
-            <li class='footer_item'><a  href="services.html" class='footer_item-link active'>Главная</a></li>
-            <li class='footer_item'><a  href="services.html" class='footer_item-link'>Услуги</a></li>
-            <li class='footer_item'><a  href="about.html" class='footer_item-link'>О компании</a></li>
-            <li class='footer_item'><a  href="reviews.html" class='footer_item-link'>Портфолио</a></li>
-            <li class='footer_item'><a  href="works.html" class='footer_item-link'>База знаний <span class="icon-geowiki"><span class="path1"></span><span class="path2"></span></span></a></li>
-            <li class='footer_item'><a  href="contacts.html" class='footer_item-link'>Контакты</a></li>
-          </ul>
-        </div>
-        <div class='footer_column'>
-          <div class='footer_title'>Контакты</div>
-          <div class='footer_label'>@email</div>
-          <a href='mailto:info@finself.ru' class='footer_href'>GeoNavtica@gmail.com</a>
-          <div class='footer_label'>телефон</div>
-          <a href='tel:+7 012 354 56 32' class='footer_href'>+7 012 354 56 32</a>
-          <div class='footer_label'>адрес</div>
-          <div class='footer_addr'>Большой Дровяной пер., 8, стр.1, Москва, Россия, 109004</div>
-        </div>
-        <div class='footer_column'>
-          <div class='footer_title'>Описание</div>
-          <div class='footer_text'>Duis leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Maecenas </div>
-          <div class='footer_flex'>
-            <div class='footer_fl'>Быстрая бесплатная консультация -</div>
-            <button type="button" class="footer_fr btn"  data-open="modal1">Перезвонить мне</button>
+            <div class="formask_polity">Нажимая кнопку отправить, я даю согласие на обработку моих <a href="#">персональных данных</a></div>
+            <div class="footer_navs">
+              <div class="footer_navs-item">
+                <div class="footer_title">Каталог товаров</div>
+                <ul class="footer_list">
+                  <li class="footer_item"><a href="№" class="footer_item-link">Срезанные</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">В горшках</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">Аксессуары</a></li>
+                </ul>
+              </div>
+              <div class="footer_navs-item">
+                <div class="footer_title">Компания</div>
+                <ul class="footer_list">
+                  <li class="footer_item"><a href="№" class="footer_item-link">О нас</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">Контакты</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">Новости</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">Доставка и оплата</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">Ёлки оптом</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">Корзина</a></li>
+                  <li class="footer_item"><a href="№" class="footer_item-link">Наш склад</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="formask_who">
+              ИП Кузнецов А.В. <br>
+              Адрес офиса: Москва, Каширское шоссе, дом 148, к.1 офис 309 <br>
+              Тел. <a href="tel:+7 (495) 772-36-33">+7 (495) 772-36-33</a>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class='footer_copybox'>
-      <div class='container'>
-        <div class='footer_copyright'>© 2018 - 2020 GeoNavftica - Все права защищены</div>
+        <div class="footer_column">
+          <a class="logo-link" href="/" >
+            <img class="logo-img" src="images/logo.svg" alt="website logo">
+          </a>
+          <div class="footer_soc-phone">
+            <ul class="social">
+              <li class="social__item">
+                <a href="#" class="social__link blue" aria-label="Мы во Telegram"><span class="icon-soc_1"></span></a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link purple" aria-label="Мы во Viber"><span class="icon-soc_2"></span></a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link green" aria-label="Мы в Watsapp"><span class="icon-soc_3"></span></a>
+              </li>
+            </ul>
+            <a href="tel:+7 (495) 772-36-33" class="footer_sphone">+7 (495) 772-36-33</a>
+          </div>
+          <div class="footer_navs">
+            <div class="footer_navs-item">
+              <div class="footer_title">Каталог товаров</div>
+              <ul class="footer_list">
+                <li class="footer_item"><a href="№" class="footer_item-link">Срезанные</a></li>
+                <li class="footer_item"><a href="№" class="footer_item-link">В горшках</a></li>
+                <li class="footer_item"><a href="№" class="footer_item-link">Аксессуары</a></li>
+              </ul>
+            </div>
+            <div class="footer_navs-item">
+              <div class="footer_title">Компания</div>
+              <ul class="footer_list">
+                <li class="footer_item"><a href="№" class="footer_item-link">О нас</a></li>
+                <li class="footer_item"><a href="№" class="footer_item-link">Контакты</a></li>
+                <li class="footer_item"><a href="№" class="footer_item-link">Новости</a></li>
+                <li class="footer_item"><a href="№" class="footer_item-link">Доставка и оплата</a></li>
+                <li class="footer_item"><a href="№" class="footer_item-link">Ёлки оптом</a></li>
+                <li class="footer_item"><a href="№" class="footer_item-link">Корзина</a></li>
+                <li class="footer_item"><a href="№" class="footer_item-link">Наш склад</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </footer>
 
-  <div class='modalny' id="modal1" >
+  <div class="modalny" id="modal_cart" >
     <div class="modal-dialog">
       <button class="close-modal" aria-label="close modal" data-close>
         ✕
       </button>
       <form class="form_wrapper" action="" method="post">
         <div class="form_container">
-          <div class="form_title">Заполните поля ниже и мы Вам перезвоним в ближайшие 5 минут!</div>
-          <input type="text" class="form_input" placeholder="Ваше имя">
-          <input type="text" class="form_input" placeholder="Номер телефона">
+          <div class="modal_cart-wrapper">
+            <div class="modal_col">
+              <div class="modal_cart-img"><img src="./images/modal_cart_add_img_demo2.jpg" alt="" class="responze"></div>
+              <input type="text" class="form_input" placeholder="Имя*">
+              <input type="text" class="form_input" placeholder="E-mail">
+              <input type="text" class="form_input" placeholder="Телефон">
+              <div class="modal_cart-policy">Нажимая кнопку «Отправить», вы соглашаетесь
+                с <a href="#">Политикой конфиденциальности</a></div>
+            </div>
+            <div class="modal_col">
+              <div class="modal_cart-productbox">
+                <!-- можно несколько выводить продуктов -->
+                <div class="modal_cart-product">
+                  <div class="modal_cart-name">Пихта Фразера <span>1.25 - 1.5 м</span></div>
+                  <div class="modal_cart-price"><span>6900</span>₽</div>
+                </div>
+              </div>
+              <div class="modal_cart-count">
+                <span class="modal_cart-prop modal_cart-plus" data-quantity="minus" data-field="quantity_pid"><span class="icon-minus"></span></span>
+                <input type="number" class="form_input-count" name="quantity_pid" value="1" >
+                <span class="modal_cart-prop modal_cart-minus" data-quantity="plus" data-field="quantity_pid"><span class="icon-plus"></span></span>
+              </div>
+              <div class="modal_cart-totalbox">
+                <div class="modal_cart-label">Итого:</div>
+                <div class="modal_cart-total"><span>6 900</span>₽</div>
+              </div>
+              <div class="modal_cart-info">Подробнее о способах <a href="#">доставки и оплаты</a></div>
+              <textarea class="modal_cart-textarea" id="" cols="30" rows="4" placeholder="Комментарий"></textarea>
+              <input type="submit" class="form_btn btn" value="Отправить">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modalny" id="modal1" >
+    <div class="modal-dialog">
+      <button class="close-modal" aria-label="close modal" data-close>
+        ✕
+      </button>
+      <form class="form_wrapper" action="" method="post">
+        <div class="form_container">
+          <div class="form_title">Заполните форму<br> и мы свяжемся с вами!</div>
+          <input type="text" class="form_input" placeholder="Имя">
+          <input type="text" class="form_input" placeholder="Телефон">
           <input type="submit" class="form_btn btn" value="Отправить">
         </div>
       </form>
     </div>
   </div>
 
-  <div class='modalny' id="thanksbox" >
+  <div class="modalny" id="thanksbox" >
     <div class="modal-dialog">
       <button class="close-modal" aria-label="close modal" data-close>
         ✕
       </button>
       <div class="form_wrapper" >
         <div class="form_container">
-          <span class="icon-accepted"><span class="path1"></span><span class="path2"></span></span>
-          <div class="thanksbox-title">Спасибо! Ожидайте звонка</div>
+          <div class="thanksbox-title">Спасибо за отправку! <br> Мы Вам перезвоним в ближайшие 5 минут!</div>
         </div>
       </div>
     </div>
   </div>
 
+
+  <div class="modalny" id="modal_cart_add" >
+    <div class="modal-dialog">
+      <button class="close-modal" aria-label="close modal" data-close>
+        ✕
+      </button>
+      <div class="form_wrapper" >
+        <div class="form_container">
+          <div class="form_title">Товар добавлен в корзину!</div>
+          <div class="modal_add-img"><img src="./images/modal_cart_add_img_demo1.jpg" alt="" class="responze"></div>
+          <div class="modal_add-name">Пихта Фразера 1.25 - 1.5</div>
+          <a class="modal_add-btn btn" href="/cart.html">Перейти в корзину</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <span class="swiper-scrollbar-drag"></span>
+  <span class="is-visible"></span>
 </div>
 </body>
 </html>

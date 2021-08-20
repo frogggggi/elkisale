@@ -68,18 +68,19 @@ ul {
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
-  border: 0;
   cursor: pointer;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  user-select: none;
+  box-sizing: border-box;
+  border: 2px solid transparent;
   &:hover {
     background: #CB2C2C;
   }
   &:focus {
     background: #CB2C2C;
     border: 2px solid #FA9C9C;
-    box-sizing: border-box;
   }
 }
 
@@ -88,12 +89,15 @@ ul {
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 6px;
+  color: #000000;
   &:hover {
     background: #000000;
+    color: #ffffff;
   }
   &:focus {
     background: #000000;
     border: 2px solid #808080;
+    color: #ffffff;
   }
 }
 
@@ -252,6 +256,17 @@ button {
   display: none!important;
 }
 
+.hide_mobile {
+  display: none!important;
+}
+
+
+
+.shown_mobile {
+  display: none!important;
+}
+
+
 .mfp-bg {
   background: rgba(39, 56, 66, 0.85);
   opacity: 1;
@@ -393,6 +408,12 @@ html {
   }
   .show_mobile {
     display: block;
+  }
+  .shown_mobile {
+      display: flex!important;
+   }
+  .shown_desctop {
+    display: none!important;
   }
 
   .swiper-pagination {

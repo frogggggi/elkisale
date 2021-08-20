@@ -79,24 +79,6 @@ module.exports = {
       inject: 'head',
       minify: false
     }),
-    // new HtmlWebpackPlugin({
-    //   title: 'tris-404-page',
-    //   filename: '404.html',
-    //   template: './src/404.html',
-    //   inject: 'head'
-    // }),
-    // new HtmlWebpackPlugin({
-    //   title: 'tris-contacts-page',
-    //   filename: 'contacts.html',
-    //   template: './src/contacts.html',
-    //   inject: 'head'
-    // }),
-    // new HtmlWebpackPlugin({
-    //   title: 'tris-about-page',
-    //   filename: 'about.html',
-    //   template: './src/about.html',
-    //   inject: 'head'
-    // }),
     new HtmlWebpackPlugin({
       title: 'tris-catalog-page',
       filename: 'catalog.html',
@@ -104,48 +86,35 @@ module.exports = {
       inject: 'head',
       minify: false
     }),
-    // new HtmlWebpackPlugin({
-    //   title: 'tris-reviews-page',
-    //   filename: 'reviews.html',
-    //   template: './src/reviews.html',
-    //   inject: 'head'
-    // }),
-    // new HtmlWebpackPlugin({
-    //   title: 'tris-works-page',
-    //   filename: 'works.html',
-    //   template: './src/works.html',
-    //   inject: 'head'
-    // }),
-    // new HtmlWebpackPlugin({
-    //   title: 'tris-services-page',
-    //   filename: 'services.html',
-    //   template: './src/services.html',
-    //   inject: 'head'
-    // }),
-    // new HtmlWebpackPlugin({
-    //   title: 'tris-portfolio-page',
-    //   filename: 'portfolio.html',
-    //   template: './src/portfolio.html',
-    //   inject: 'head'
-    // }),
-    // new HtmlWebpackPlugin({
-    //   title: 'tris-services-details-page',
-    //   filename: 'services-details.html',
-    //   template: './src/services-details.html',
-    //   inject: 'head'
-    // }),
-    // new HtmlWebpackPlugin({
-    //   title: 'tris-blog-page',
-    //   filename: 'blog.html',
-    //   template: './src/blog.html',
-    //   inject: 'head'
-    // }),
-    // new HtmlWebpackPlugin({
-    //   title: 'tris-article-page',
-    //   filename: 'article.html',
-    //   template: './src/article.html',
-    //   inject: 'head'
-    // }),
+    new HtmlWebpackPlugin({
+      title: 'tris-product-page',
+      filename: 'product.html',
+      template: './src/product.html',
+      inject: 'head',
+      minify: false
+    }),
+    new HtmlWebpackPlugin({
+      title: 'tris-about-page',
+      filename: 'about.html',
+      template: './src/about.html',
+      inject: 'head',
+      minify: false
+    }),
+    new HtmlWebpackPlugin({
+      title: 'tris-delivery-page',
+      filename: 'delivery.html',
+      template: './src/delivery.html',
+      inject: 'head',
+      minify: false
+    }),
+    new HtmlWebpackPlugin({
+      title: 'tris-opt-page',
+      filename: 'opt.html',
+      template: './src/opt.html',
+      inject: 'head',
+      minify: false
+    }),
+
     new PreloadWebpackPlugin({
       rel: 'preload',
       as(entry) {

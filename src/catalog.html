@@ -223,42 +223,41 @@
                     <div class="sidebar_group">
                         <div class="sidebar-title">Вид дерева</div>
                         <div class="sidebar_view-item">
-                            <input type="checkbox" id="view_1" class="sidebar_view-checkbox">
-                            <label for="view_1" class="sidebar_view-label">Пихта</label>
+                            <input type="checkbox" id="view_de1" class="sidebar_view-checkbox">
+                            <label for="view_de1" class="sidebar_view-label">Пихта</label>
                         </div>
                         <div class="sidebar_view-item">
-                            <input type="checkbox" id="view_2" class="sidebar_view-checkbox">
-                            <label for="view_2" class="sidebar_view-label">Ёлка</label>
+                            <input type="checkbox" id="view_de2" class="sidebar_view-checkbox">
+                            <label for="view_de2" class="sidebar_view-label">Ёлка</label>
                         </div>
                         <div class="sidebar_view-item">
-                            <input type="checkbox" id="view_3" class="sidebar_view-checkbox">
-                            <label for="view_3" class="sidebar_view-label">Сосна</label>
+                            <input type="checkbox" id="view_de3" class="sidebar_view-checkbox">
+                            <label for="view_de3" class="sidebar_view-label">Сосна</label>
                         </div>
                     </div>
 
                     <div class="sidebar_group">
                         <div class="sidebar-title">Цена</div>
-                        <div id="price-slider-range" class="sidebar_price-ranger price-filter-range" name="rangeInput"></div>
+                        <div id="price-slider-range1" class="sidebar_price-ranger price-filter-range" ></div>
                         <div class="sidebar_price">
                             <div class="sidebar_price_item">
-                                <span>от</span> <input type="number" value="0" min=0 max="9900" oninput="validity.valid||(value='0');" id="price-min_val" class="sidebar_price_input price-range-field" />
+                                <span>от</span> <input type="number" value="0" min=0 max="9900" oninput="validity.valid||(value='0');" id="price-min_val1" class="sidebar_price_input price-range-field" />
                             </div>
                             <div class="sidebar_price_item">
-                                <span>до</span> <input type="number" value="10000" min=0 max="10000" oninput="validity.valid||(value='10000');" id="price-max_val" class="sidebar_price_input price-range-field" />
+                                <span>до</span> <input type="number" value="10000" min=0 max="10000" oninput="validity.valid||(value='10000');" id="price-max_val1" class="sidebar_price_input price-range-field" />
                             </div>
                         </div>
-                        <button class="price-range-search" id="price-range-submit">Search</button>
                     </div>
 
                     <div class="sidebar_group">
                         <div class="sidebar-title">Высота дерева</div>
-                        <div id="height-slider-range" class="sidebar_price-ranger price-filter-range" name="rangeInput"></div>
+                        <div id="height-slider-range1" class="sidebar_price-ranger price-filter-range"></div>
                         <div class="sidebar_price">
                             <div class="sidebar_price_item">
-                                <span>от</span> <input type="number" value="0" min=0 max="9900" oninput="validity.valid||(value='0');" id="height-min_val" class="sidebar_price_input price-range-field" /> <span>см</span>
+                                <span>от</span> <input type="number" value="0" min=0 max="9900" oninput="validity.valid||(value='0');" id="height-min_val1" class="sidebar_price_input price-range-field" /> <span>см</span>
                             </div>
                             <div class="sidebar_price_item">
-                                <span>до</span> <input type="number" value="1000" min=0 max="10000" oninput="validity.valid||(value='10000');" id="height-max_val" class="sidebar_price_input price-range-field" /> <span>см</span>
+                                <span>до</span> <input type="number" value="1000" min=0 max="10000" oninput="validity.valid||(value='10000');" id="height-max_val1" class="sidebar_price_input price-range-field" /> <span>см</span>
                             </div>
                         </div>
                     </div>
@@ -287,7 +286,7 @@
                                     <span class="icon-star"></span>
                                     <span class="icon-star"></span>
                                     <span class="icon-star"></span>
-                                </div>`
+                                </div>
                                 <div class="prodmain_item-btn btn" data-open="modal_cart_add">В корзину</div>
                             </div>
                         </div>
@@ -541,9 +540,9 @@
                                 </div>
                             </div>
                             <div class="modal_cart-count">
-                                <span class="modal_cart-prop modal_cart-plus" data-quantity="minus" data-field="quantity"><span class="icon-minus"></span></span>
-                                <input type="number" class="form_input-count" name="quantity" value="1" >
-                                <span class="modal_cart-prop modal_cart-minus" data-quantity="plus" data-field="quantity"><span class="icon-plus"></span></span>
+                                <span class="modal_cart-prop modal_cart-plus" data-quantity="minus" data-field="quantity_pid"><span class="icon-minus"></span></span>
+                                <input type="number" class="form_input-count" name="quantity_pid" value="1" >
+                                <span class="modal_cart-prop modal_cart-minus" data-quantity="plus" data-field="quantity_pid"><span class="icon-plus"></span></span>
                             </div>
                             <div class="modal_cart-totalbox">
                                 <div class="modal_cart-label">Итого:</div>

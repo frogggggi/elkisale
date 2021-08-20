@@ -49,6 +49,82 @@ const swiper1 = new Swiper('.carousell_slider', {
   }
 });
 
+// sliders for product page
+const enableSwipers = function() {
+  const swiper_thumbs = new Swiper('.swiper_thumbs_js', {
+    spaceBetween: 20,
+    slidesPerView: 5,
+    direction: "vertical",
+    freeMode: true,
+    watchSlidesVisibility: false,
+    watchSlidesProgress: false,
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
+  });
+  const swiperr_big = new Swiper('.swiper_big_js', {
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.swiper_big-next',
+      prevEl: '.swiper_big-prev',
+    },
+    thumbs: {
+      swiper: swiper_thumbs,
+    },
+    breakpoints: {
+      999: {
+        slidesPerView: 1,
+      },
+      1280: {
+        slidesPerView: 1,
+      },
+    },
+  });
+  const suitableItems = new Swiper('.suitable_slider_js', {
+    spaceBetween: 32,
+    slidesPerView: 4,
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
+    navigation: {
+      nextEl: '.suitable-next',
+      prevEl: '.suitable-prev',
+    },
+  });
+  const revieewsPhotos = new Swiper('.reviews_userphotos_js', {
+    spaceBetween: 32,
+    slidesPerView:'auto',
+    touchRatio: 0.2,
+    freeMode: true,
+    slideToClickedSlide: true,
+    navigation: {
+      nextEl: '.reviews_userphotos-next',
+      prevEl: '.reviews_userphotos-prev',
+    },
+    speed: 1000,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+  });
+  const yourchoiceItems = new Swiper('.yourchoice_slider_js', {
+    spaceBetween: 32,
+    slidesPerView: 4,
+    touchRatio: 0.2,
+    freeMode: true,
+    slideToClickedSlide: true,
+    navigation: {
+      nextEl: '.yourchoice-next',
+      prevEl: '.yourchoice-prev',
+    },
+    speed: 1000,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+  });
+}
+enableSwipers();
+
+
 // eslint-disable-next-line no-unused-vars
 let news_swiper;
 
@@ -130,73 +206,6 @@ const enableMainSwiper = function() {
 
 enableMainSwiper();
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const width = window.innerWidth
-//   if (width < 1024){
-//     const slider = new Swiper()
-//   }
-// })
-// const breakpoint = window.matchMedia( '(min-width:31.25em)' );
-// const more_btn = document.querySelector('.swiper_btn_more');
-// const breakpointChecker = function() {
-//   // if larger viewport and multi-row layout needed
-//   if ( breakpoint.matches === false ) {
-//     // clean up old instances and inline styles when available
-//     if ( news_swiper !== undefined ) news_swiper.destroy( true, true );
-//
-//       if (more_btn) {
-//         more_btn.classList.toggle('active');
-//       }
-//     return;
-//     // else if a small viewport and single column layout needed
-//   } else if ( breakpoint.matches === true ) {
-//     // fire small viewport version of swiper
-//     return enableSwiper();
-//   }
-// };
-
-// let step = 3; // Размер этих самых порций. Чтобы легко можно было поменять.
-// let prod = document.querySelectorAll('.products');
-//
-// for( let i = 0; i < prod.length; i++ ){
-//   let product = prod[i];
-//   let li = product.querySelectorAll('li');
-//   for( let j = 0; j < step; j++ ){//Для начала перебираем - показываем первые step пунктов.
-//     // Но только если такие существуют
-//     if( li[j] ){ li[j].classList.add('visi') }
-//   }
-//
-//   let more = product.querySelector('.more');
-//   more.addEventListener('click', function(){
-//     let visi = product.querySelectorAll('.visi');
-//     let next = visi[visi.length-1].nextElementSibling;
-//     // Достали следующий элемент ПОСЛЕДНЕГО элемента visi.
-//     //Предполагается, что никогда не будет добавлено полностью пустых ul.
-//     let it = 0;
-//     while( it < step ){
-//       if( next ){
-//         next.classList.add('visi');
-//         next = next.nextElementSibling;
-//         it++;
-//       } else {
-//         break; // Если следующего элемента не оказалось - выключаем цикл.
-//       }
-//     }
-//   });
-// }
-
-
-// keep an eye on viewport size changes
-// breakpoint.addListener(breakpointChecker);
-
-// kickstart
-// breakpointChecker();
-
-
-// console.log(
-//   '%c Hello from /scripts/script.js ',
-//   'background: lemonchiffon; border: 1px solid #fff'
-// );
 console.log(
   '%c Coded by: frogggggi@gmail.com 💠',
   'background: lavenderblush; border: 1px solid #000; padding: 4px; padding-top: 10px; padding-bottom: 8px;'
@@ -235,12 +244,15 @@ if (burger) {
 
 const mobileFilterBtn = document.querySelector('.catalog_filter');
 const wrapperMain = document.querySelector('.wrapper');
-mobileFilterBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  mobileFilterBtn.classList.toggle('active'); // works correctly
-  mobileFilterBlock.classList.toggle('active'); // works correctly
-  wrapperMain.classList.toggle('fixed'); // works correctly
-});
+if (mobileFilterBtn) {
+  mobileFilterBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    mobileFilterBtn.classList.toggle('active'); // works correctly
+    mobileFilterBlock.classList.toggle('active'); // works correctly
+    wrapperMain.classList.toggle('fixed'); // works correctly
+  });
+}
+
 
 
 
@@ -293,13 +305,6 @@ if (document.getElementById('scrollNext')) {
     .getElementById('scrollNext')
     .addEventListener('click', doScrolling.bind(null, '#next_section', 1000));
 }
-
-// document
-//   .getElementById('scrollTop')
-//   .addEventListener('click', doScrolling.bind(null, '#top', 1500));
-// document
-//   .getElementById('scrollBot')
-//   .addEventListener('click', doScrolling.bind(null, '#bottom', 4000));
 
 const questlist = document.querySelectorAll('.questions_elem-title');
 // eslint-disable-next-line no-plusplus
@@ -362,9 +367,6 @@ if (numbersWrapper) {
     }
   });
 }
-
-
-
 
 // eslint-disable-next-line no-undef
 $(function () {
@@ -445,6 +447,8 @@ function onTouchEnd() {
 
 const minPriceElement = document.getElementById("price-min_val");
 const maxPriceElement = document.getElementById("price-max_val");
+const minPriceElement1 = document.getElementById("price-min_val1");
+const maxPriceElement1 = document.getElementById("price-max_val1");
 
 if (minPriceElement && maxPriceElement) {
   const minPriceElementAttr = minPriceElement.getAttribute("min");
@@ -466,9 +470,31 @@ if (minPriceElement && maxPriceElement) {
     }
   });
 }
+if (minPriceElement1 && maxPriceElement1) {
+  const minPriceElementAttr = minPriceElement1.getAttribute("min");
+  const maxPriceElementAttr = maxPriceElement1.getAttribute("max");
+  minPriceElement.setAttribute("max", (maxPriceElementAttr - 100).toString());
+  $("#price-slider-range1").slider({
+    range: true,
+    orientation: "horizontal",
+    min: 0,
+    max: 10000,
+    values: [minPriceElementAttr, maxPriceElementAttr],
+    step: 100,
+    slide: function (event, ui) {
+      if (ui.values[0] == ui.values[1]) {
+        return false;
+      }
+      $("#price-min_val1").val(ui.values[0]);
+      $("#price-max_val1").val(ui.values[1]);
+    }
+  });
+}
 
 const minHeightElement = document.getElementById("height-min_val");
 const maxHeightElement = document.getElementById("height-max_val");
+const minHeightElement1 = document.getElementById("height-min_val1");
+const maxHeightElement1 = document.getElementById("height-max_val1");
 
 if (minHeightElement && maxHeightElement) {
   const minHeightElementAttr = minHeightElement.getAttribute("min");
@@ -490,4 +516,97 @@ if (minHeightElement && maxHeightElement) {
     }
   });
 }
+if (minHeightElement1 && maxHeightElement1) {
+  const minHeightElementAttr = minHeightElement1.getAttribute("min");
+  const maxHeightElementAttr = maxHeightElement1.getAttribute("max");
+  minHeightElement.setAttribute("max", (maxHeightElementAttr - 100).toString());
+  $("#height-slider-range1").slider({
+    range: true,
+    orientation: "horizontal",
+    min: 0,
+    max: 10000,
+    values: [minHeightElementAttr, maxHeightElementAttr],
+    step: 100,
+    slide: function (event, ui) {
+      if (ui.values[0] == ui.values[1]) {
+        return false;
+      }
+      $("#height-min_val1").val(ui.values[0]);
+      $("#height-max_val1").val(ui.values[1]);
+    }
+  });
+}
 
+// TABS
+var $tabs = function (target) {
+  var
+      _elemTabs = (typeof target === 'string' ? document.querySelector(target) : target),
+      _eventTabsShow,
+      _showTab = function (tabsLinkTarget) {
+        var tabsPaneTarget, tabsLinkActive, tabsPaneShow;
+        tabsPaneTarget = document.querySelector(tabsLinkTarget.getAttribute('href'));
+        tabsLinkActive = tabsLinkTarget.parentElement.querySelector('.tabs__link_active');
+        tabsPaneShow = tabsPaneTarget.parentElement.querySelector('.tabs__pane_show');
+        // если следующая вкладка равна активной, то завершаем работу
+        if (tabsLinkTarget === tabsLinkActive) {
+          return;
+        }
+        // удаляем классы у текущих активных элементов
+        if (tabsLinkActive !== null) {
+          tabsLinkActive.classList.remove('tabs__link_active');
+        }
+        if (tabsPaneShow !== null) {
+          tabsPaneShow.classList.remove('tabs__pane_show');
+        }
+        // добавляем классы к элементам (в завимости от выбранной вкладки)
+        tabsLinkTarget.classList.add('tabs__link_active');
+        tabsPaneTarget.classList.add('tabs__pane_show');
+        document.dispatchEvent(_eventTabsShow);
+      },
+      _switchTabTo = function (tabsLinkIndex) {
+        var tabsLinks = _elemTabs.querySelectorAll('.tabs__link');
+        if (tabsLinks.length > 0) {
+          if (tabsLinkIndex > tabsLinks.length) {
+            tabsLinkIndex = tabsLinks.length;
+          } else if (tabsLinkIndex < 1) {
+            tabsLinkIndex = 1;
+          }
+          _showTab(tabsLinks[tabsLinkIndex - 1]);
+        }
+      };
+
+  _eventTabsShow = new CustomEvent('tab.show', { detail: _elemTabs });
+
+  if (_elemTabs) {
+    _elemTabs.addEventListener('click', function(e) {
+      var target = e.target.closest('.tabs__link');
+      // завершаем выполнение функции, если кликнули не по ссылке
+      if (!target) {
+        return;
+      }
+      // отменяем стандартное действие
+      e.preventDefault();
+      _showTab(target);
+    });
+  }
+
+
+  return {
+    showTab: function (target) {
+      _showTab(target);
+    },
+    switchTabTo: function (index) {
+      _switchTabTo(index);
+    }
+  }
+
+};
+
+// Eсли результат вызова функции $tabs сохранить в переменную, то можно использовать методы, которые она представляет.
+// https://itchief.ru/javascript/tabs
+// Например:
+// var tabs1 = $tabs('.tabs');
+// // программно переключиться на 2 вкладку (2 – номер вкладки, на которую нужно перейти)
+// tabs1.switchToTab(2);
+
+$tabs('.tabs');

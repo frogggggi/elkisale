@@ -16,6 +16,10 @@ module.exports = merge(common, {
         ]
       },
       {
+        test: /\.swf$/,
+        loader: "file?name=[path][name].[ext]"
+      },
+      {
         test: /\.(sa|sc|c)ss$/,
         use: [
           'style-loader',

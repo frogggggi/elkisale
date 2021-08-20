@@ -328,6 +328,12 @@ h1,h2,h3,h4,.title {
 .icon-star:before {
   content: "\e927";
 }
+.icon-star-half-outline:before {
+  content: "\e929";
+}
+.icon-star-outline:before {
+  content: "\e92c";
+}
 .icon-filter:before {
   content: "\e929";
 }
@@ -336,4 +342,16 @@ h1,h2,h3,h4,.title {
 }
 .icon-plus:before {
   content: "\e92a";
+}
+.icon-replay:before {
+  content: "\e92d";
+}
+.icon-addphoto:before {
+  content: "\e92e";
+}
+.icon-play_in:before {
+  content: "\e92f";
+}
+.icon-edit:before {
+  content: "\e930";
 }
