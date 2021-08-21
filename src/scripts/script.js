@@ -256,14 +256,18 @@ if (burger) {
   closeNavMob.addEventListener('click', (e) => {
     e.preventDefault();
     burger.classList.remove('active'); // works correctly
-    mobileFilterBlock.classList.remove('active'); // works correctly
+    if (mobileFilterBlock) {
+      mobileFilterBlock.classList.remove('active'); // works correctly
+    }
     navMob.classList.remove('active'); // works correctly
     wrapper.classList.remove('fixed'); // works correctly
   });
   bgNavMob.addEventListener('click', (e) => {
     e.preventDefault();
     burger.classList.remove('active'); // works correctly
-    mobileFilterBlock.classList.remove('active'); // works correctly
+    if (mobileFilterBlock) {
+      mobileFilterBlock.classList.remove('active'); // works correctly
+    }
     navMob.classList.remove('active'); // works correctly
     wrapper.classList.remove('fixed'); // works correctly
   });
@@ -275,7 +279,9 @@ if (mobileFilterBtn) {
   mobileFilterBtn.addEventListener('click', (e) => {
     e.preventDefault();
     mobileFilterBtn.classList.toggle('active'); // works correctly
-    mobileFilterBlock.classList.toggle('active'); // works correctly
+    if (mobileFilterBlock) {
+      mobileFilterBlock.classList.toggle('active'); // works correctly
+    }
     wrapperMain.classList.toggle('fixed'); // works correctly
   });
 }
