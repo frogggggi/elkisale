@@ -120,6 +120,33 @@ const enableSwipers = function() {
       delay: 5000,
       disableOnInteraction: false,
     },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      568: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      998: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      999: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
+      1441: {
+        slidesPerView: 4,
+      }
+    }
   });
 }
 enableSwipers();

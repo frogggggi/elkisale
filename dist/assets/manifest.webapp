@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "name": "tris-webpack-boilerplate",
-  "description": "A Webpack boilerplate for static websites that has all the necessary modern tools and optimizations built-in. Score a perfect 10/10 on performance.",
+  "name": "elki-sale",
+  "description": "trees shop",
   "icons": {
     "60": "/assets/firefox_app_60x60.png",
     "128": "/assets/firefox_app_128x128.png",

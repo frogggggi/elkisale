@@ -79,13 +79,13 @@ module.exports = merge(common, {
     new FaviconsWebpackPlugin({
       logo: './src/images/favicon.svg',
       favicons: {
-        appName: 'tris-webpack-boilerplate',
+        appName: 'elki-sale',
         appDescription:
-          'A Webpack boilerplate for static websites that has all the necessary modern tools and optimizations built-in. Score a perfect 10/10 on performance.',
+          'trees shop',
         developerName: 'Alexandr Ivashchenko',
         developerURL: null, // prevent retrieving from the nearest package.json
-        background: '#fafafa',
-        theme_color: '#FFA8A8',
+        background: '#ffffff',
+        theme_color: '#EDF5FA',
         icons: {
           coast: false,
           yandex: false

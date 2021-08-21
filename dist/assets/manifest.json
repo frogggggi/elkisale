@@ -1,14 +1,14 @@
 {
-  "name": "tris-webpack-boilerplate",
-  "short_name": "tris-webpack-boilerplate",
-  "description": "A Webpack boilerplate for static websites that has all the necessary modern tools and optimizations built-in. Score a perfect 10/10 on performance.",
+  "name": "elki-sale",
+  "short_name": "elki-sale",
+  "description": "trees shop",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
   "orientation": "any",
   "start_url": "/?homescreen=1",
-  "background_color": "#fafafa",
-  "theme_color": "#FFA8A8",
+  "background_color": "#ffffff",
+  "theme_color": "#EDF5FA",
   "icons": [
     {
       "src": "/assets/android-chrome-36x36.png",
