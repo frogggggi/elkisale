@@ -262,7 +262,10 @@ button {
 
 
 
-.shown_mobile {
+.showf_mobile {
+  display: none!important;
+}
+.showb_mobile {
   display: none!important;
 }
 
@@ -427,8 +430,11 @@ select:-webkit-autofill:focus {
   .show_mobile {
     display: block;
   }
-  .shown_mobile {
+  .showf_mobile {
       display: flex!important;
+   }
+  .showb_mobile {
+      display: block!important;
    }
   .shown_desctop {
     display: none!important;

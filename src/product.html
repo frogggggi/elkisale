@@ -101,7 +101,7 @@
                         <li class="spacer"></li>
                         <li><a href="#">Контакты</a></li>
                         <li class="spacer"></li>
-                        <li><a  data-open="modal_cart"><span class="icon-cart"><span class="cart_count">1</span></span>Корзина</a></li>
+                        <li><a data-open="modal_cart"><span class="icon-cart"><span class="cart_count">1</span></span>Корзина</a></li>
                     </ul>
                 </nav>
             </div>
@@ -121,7 +121,7 @@
                     <li><a href="#">Наш склад</a></li>
                     <li><a href="#">О нас</a></li>
                     <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Корзина</a></li>
+                    <li><a data-open="modal_cart">Корзина</a></li>
                 </ul>
             </nav>
             <div class="nav_mobile_soc-phone">
@@ -264,8 +264,8 @@
                             </div>
                         </div>
                         <div class="swiper-containerbox">
-                            <div class="swiper_big-arrpws swiper_big-next shown_mobile"><span class="icon-arrow"></span></div>
-                            <div class="swiper_big-arrpws swiper_big-prev shown_mobile"><span class="icon-arrow"></span></div>
+                            <div class="swiper_big-arrpws swiper_big-next showf_mobile"><span class="icon-arrow"></span></div>
+                            <div class="swiper_big-arrpws swiper_big-prev showf_mobile"><span class="icon-arrow"></span></div>
                             <div class="swiper-container swiper_big swiper_big_js">
                                 <div class="swiper-wrapper product_slider-big">
                                     <div class="swiper-slide">
@@ -302,8 +302,8 @@
                         </div>
 
                     </div>
-                    <div class="product_title title show shown_mobile">Пихта Фразера 1.25 - 1.5 м</div>
-                    <div class="product_substars shown_mobile">
+                    <div class="product_title title show showf_mobile">Пихта Фразера 1.25 - 1.5 м</div>
+                    <div class="product_substars showf_mobile">
                         <div class="product_subrating">
                             <span class="icon-star"></span>
                             <span class="icon-star"></span>
@@ -828,34 +828,49 @@
             <form class="form_wrapper" action="" method="post">
                 <div class="form_container">
                     <div class="modal_cart-wrapper">
-                        <div class="modal_col">
-                            <div class="modal_cart-img"><img src="./images/modal_cart_add_img_demo2.jpg" alt="" class="responze"></div>
-                            <input type="text" class="form_input" placeholder="Имя*">
-                            <input type="text" class="form_input" placeholder="E-mail">
-                            <input type="text" class="form_input" placeholder="Телефон">
-                            <div class="modal_cart-policy">Нажимая кнопку «Отправить», вы соглашаетесь
-                                с <a href="#">Политикой конфиденциальности</a></div>
-                        </div>
-                        <div class="modal_col">
-                            <div class="modal_cart-productbox">
-                                <!-- можно несколько выводить продуктов -->
-                                <div class="modal_cart-product">
-                                    <div class="modal_cart-name">Пихта Фразера <span>1.25 - 1.5 м</span></div>
-                                    <div class="modal_cart-price"><span>6900</span>₽</div>
+                        <div class="modal_row">
+                            <div class="modal_col">
+                                <div class="modal_cart-img">
+                                    <picture class="logotip">
+                                        <source	media="(max-width: 768px)" srcset="./images/cart_demo_img_mob_1.jpg">
+                                        <img src="./images/modal_cart_add_img_demo2.jpg" alt=""  class="responze"/>
+                                    </picture>
                                 </div>
                             </div>
-                            <div class="modal_cart-count">
-                                <span class="modal_cart-prop modal_cart-plus" data-quantity="minus" data-field="quantity_pid"><span class="icon-minus"></span></span>
-                                <input type="number" class="form_input-count" name="quantity_pid" value="1" >
-                                <span class="modal_cart-prop modal_cart-minus" data-quantity="plus" data-field="quantity_pid"><span class="icon-plus"></span></span>
+                            <div class="modal_col">
+                                <div class="modal_cart-productbox">
+                                    <!-- можно несколько выводить продуктов -->
+                                    <div class="modal_cart-product">
+                                        <div class="modal_cart-name">Пихта Фразера <span>1.25 - 1.5 м</span></div>
+                                        <div class="modal_cart-price"><span>6900</span>₽</div>
+                                    </div>
+                                </div>
+                                <div class="modal_cart-count">
+                                    <span class="modal_cart-prop modal_cart-plus" data-quantity="minus" data-field="quantity"><span class="icon-minus"></span></span>
+                                    <input type="number" class="form_input-count" name="quantity" value="1" >
+                                    <span class="modal_cart-prop modal_cart-minus" data-quantity="plus" data-field="quantity"><span class="icon-plus"></span></span>
+                                </div>
+                                <div class="modal_cart-totalbox">
+                                    <div class="modal_cart-label">Итого:</div>
+                                    <div class="modal_cart-total"><span>6 900</span>₽</div>
+                                </div>
+                                <div class="modal_cart-info">Подробнее о способах <a href="#">доставки и оплаты</a></div>
                             </div>
-                            <div class="modal_cart-totalbox">
-                                <div class="modal_cart-label">Итого:</div>
-                                <div class="modal_cart-total"><span>6 900</span>₽</div>
+                        </div>
+                        <div class="modal_row">
+                            <div class="modal_col">
+                                <input type="text" class="form_input" placeholder="Имя*">
+                                <input type="text" class="form_input" placeholder="E-mail">
+                                <input type="text" class="form_input" placeholder="Телефон">
+                                <div class="modal_cart-policy hide_mobile">Нажимая кнопку «Отправить», вы соглашаетесь
+                                    с <a href="#">Политикой конфиденциальности</a></div>
                             </div>
-                            <div class="modal_cart-info">Подробнее о способах <a href="#">доставки и оплаты</a></div>
-                            <textarea class="modal_cart-textarea" id="" cols="30" rows="4" placeholder="Комментарий"></textarea>
-                            <input type="submit" class="form_btn btn" value="Отправить">
+                            <div class="modal_col">
+                                <textarea class="modal_cart-textarea" id="" cols="30" rows="4" placeholder="Комментарий"></textarea>
+                                <div class="modal_cart-policy showb_mobile">Нажимая кнопку «Отправить», вы соглашаетесь
+                                    с <a href="#">Политикой конфиденциальности</a></div>
+                                <input type="submit" class="form_btn btn" value="Отправить">
+                            </div>
                         </div>
                     </div>
                 </div>
