@@ -149,6 +149,43 @@ const enableSwipers = function() {
       delay: 5000,
       disableOnInteraction: false,
     },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 3,
+        spaceBetween: 19,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 19,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+      },
+      568: {
+        slidesPerView: 3,
+        spaceBetween: 19,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+      },
+      998: {
+        slidesPerView: 3,
+        spaceBetween: 19,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+      },
+      999: {
+        slidesPerView: 3,
+        spaceBetween: 19,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+      },
+      1441: {
+        slidesPerView: 4,
+      }
+    },
   });
   const yourchoiceItems = new Swiper('.yourchoice_slider_js', {
     spaceBetween: 32,
@@ -212,7 +249,7 @@ const enableSwiper = function() {
       nextEl: '.news_slider_next',
       prevEl: '.news_slider_prev'
     },
-    speed: 1000,
+    speed: 10000000,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
@@ -263,8 +300,12 @@ const enableMainSwiper = function() {
     centeredSlides: true,
     speed: 1000,
     autoplay: {
-      delay: 5000,
+      delay: 50000000,
       disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
     // Fix for https://github.com/nolimits4web/swiper/issues/2218
     onInit: () => {
