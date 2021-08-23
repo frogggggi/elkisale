@@ -88,7 +88,52 @@ const enableSwipers = function() {
       nextEl: '.suitable-next',
       prevEl: '.suitable-prev',
     },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      568: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      998: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      999: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
+      1441: {
+        slidesPerView: 4,
+      }
+    },
+    onInit: () => {
+      setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+        // eslint-disable-next-line no-magic-numbers
+        suitableItems.disable ();
+      }, 500);
+    }
   });
+
+
+
+
+
+
+
+
+
+
+
   const revieewsPhotos = new Swiper('.reviews_userphotos_js', {
     spaceBetween: 32,
     slidesPerView:'auto',
@@ -341,24 +386,32 @@ if (document.getElementById('scrollNext')) {
 
 const questlist = document.querySelectorAll('.questions_elem-title');
 // eslint-disable-next-line no-plusplus
-for (let i = 0; i < questlist.length; i++) {
-  questlist[i].addEventListener('click', function (e) {
-    e.preventDefault();
-    this.closest('.questions_elem').classList.toggle('active');
-  });
+if (questlist) {
+  for (let i = 0; i < questlist.length; i++) {
+    questlist[i].addEventListener('click', function (e) {
+      e.preventDefault();
+      this.closest('.questions_elem').classList.toggle('active');
+    });
+  }
 }
 
+
+
+const faqItems = document.querySelectorAll('.faq_name');
 const faqlist = document.querySelectorAll('.faq_item');
 // eslint-disable-next-line no-plusplus
-if(faqlist) {
-  for (let i = 0; i < faqlist.length; i++) {
-    faqlist[i].addEventListener('click', function (e) {
+if(faqItems) {
+  for (let i = 0; i < faqItems.length; i++) {
+    faqItems[i].addEventListener('click', function (e) {
       e.preventDefault();
-      faqlist.forEach(function (item) {
-        item.classList.remove('active');
-      });
-
-      this.classList.toggle('active');
+      if (this.parentElement.classList.contains('active')) {
+        this.parentElement.classList.remove('active');
+      }else {
+        faqlist.forEach(function (item) {
+          item.classList.remove('active');
+        });
+        this.parentElement.classList.add('active');
+      }
     });
   }
 }

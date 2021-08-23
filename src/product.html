@@ -335,49 +335,53 @@
                             <div class="product_incart btn btn_black">В корзину</div>
                             <div class="product_oneclick btn">Купить в 1 клик</div>
                         </div>
-                        <div class="product_props-title">Другие размеры</div>
-                        <div class="product_props">
-                            <div class="product_props-item">
-                                <div class="product_props-size">1.25 - 1.5 м</div>
-                                <div class="product_props-price">6 900</div>
-                            </div>
-                            <div class="product_props-item">
-                                <div class="product_props-size">1.5 - 1.75 м</div>
-                                <div class="product_props-price">7 500</div>
-                            </div>
-                            <div class="product_props-item">
-                                <div class="product_props-size">1.75 - 2 м</div>
-                                <div class="product_props-price">9 500</div>
-                            </div>
-                            <div class="product_props-item">
-                                <div class="product_props-size">2 - 2.25 м</div>
-                                <div class="product_props-price">13 500</div>
-                            </div>
-                            <div class="product_props-item">
-                                <div class="product_props-size">2.25 - 2.5 м</div>
-                                <div class="product_props-price">17 400</div>
-                            </div>
-                            <div class="product_props-item">
-                                <div class="product_props-size">2.5 - 2.75 м</div>
-                                <div class="product_props-price">22 400</div>
-                            </div>
-                            <div class="product_props-item">
-                                <div class="product_props-size">2.75 - 3 м</div>
-                                <div class="product_props-price">25 900</div>
-                            </div>
-                            <div class="product_props-item">
-                                <div class="product_props-size">3 - 3.25 м</div>
-                                <div class="product_props-price">37 000</div>
-                            </div>
-                            <div class="product_props-item">
-                                <div class="product_props-size">3.25 - 3.5 м</div>
-                                <div class="product_props-price">39 500</div>
-                            </div>
-                            <div class="product_props-item disabled">
-                                <div class="product_props-size">3.5 - 3.75 м</div>
-                                <div class="product_props-price">45 000 ₽</div>
+                        <div class="product_props-box">
+                            <div class="product_props-title">Другие размеры</div>
+                            <div class="product_props-mtitle product_props-title_js"><span class="mtitle-text">Все размеры</span><span class="icon-arrow"></span></div>
+                            <div class="product_props">
+                                <div class="product_props-item">
+                                    <div class="product_props-size">1.25 - 1.5 м</div>
+                                    <div class="product_props-price">6 900</div>
+                                </div>
+                                <div class="product_props-item">
+                                    <div class="product_props-size">1.5 - 1.75 м</div>
+                                    <div class="product_props-price">7 500</div>
+                                </div>
+                                <div class="product_props-item">
+                                    <div class="product_props-size">1.75 - 2 м</div>
+                                    <div class="product_props-price">9 500</div>
+                                </div>
+                                <div class="product_props-item">
+                                    <div class="product_props-size">2 - 2.25 м</div>
+                                    <div class="product_props-price">13 500</div>
+                                </div>
+                                <div class="product_props-item">
+                                    <div class="product_props-size">2.25 - 2.5 м</div>
+                                    <div class="product_props-price">17 400</div>
+                                </div>
+                                <div class="product_props-item">
+                                    <div class="product_props-size">2.5 - 2.75 м</div>
+                                    <div class="product_props-price">22 400</div>
+                                </div>
+                                <div class="product_props-item">
+                                    <div class="product_props-size">2.75 - 3 м</div>
+                                    <div class="product_props-price">25 900</div>
+                                </div>
+                                <div class="product_props-item">
+                                    <div class="product_props-size">3 - 3.25 м</div>
+                                    <div class="product_props-price">37 000</div>
+                                </div>
+                                <div class="product_props-item">
+                                    <div class="product_props-size">3.25 - 3.5 м</div>
+                                    <div class="product_props-price">39 500</div>
+                                </div>
+                                <div class="product_props-item disabled">
+                                    <div class="product_props-size">3.5 - 3.75 м</div>
+                                    <div class="product_props-price">45 000 ₽</div>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -390,15 +394,25 @@
                 <div class="useful_block">
                     <div class="useful_products">
                         <div class="useful_item">
-                            <div class="useful_item-img"><img src="./images/useful_item-img_demo.jpg" alt="" class="responze"></div>
+                            <div class="useful_item-img">
+                                <picture class="logotip">
+                                    <source	media="(max-width: 768px)" srcset="./images/useful_item-img_demo_mob.jpg">
+                                    <img src="./images/useful_item-img_demo.jpg" alt=""  class="responze"/>
+                                </picture>
+                            </div>
                             <div class="useful_item-wrapper">
                                 <div class="useful_item-price"><span>350 </span>₽</div>
                                 <div class="useful_item-descr">Жидкость для елок Bona Forte</div>
                             </div>
                         </div>
-                        <img src="./images/useful_plus.svg" alt="">
+                        <img src="./images/useful_plus.svg" alt="" class="useful_item-img-plus responze">
                         <div class="useful_item">
-                            <div class="useful_item-img"><img src="./images/useful_item-img_demo1.jpg" alt="" class="responze"></div>
+                            <div class="useful_item-img">
+                                <picture class="logotip">
+                                    <source	media="(max-width: 768px)" srcset="./images/useful_item-img_demo1_mob.jpg">
+                                    <img src="./images/useful_item-img_demo1.jpg" alt=""  class="responze"/>
+                                </picture>
+                            </div>
                             <div class="useful_item-wrapper">
                                 <div class="useful_item-price"><span>350 </span>₽</div>
                                 <div class="useful_item-descr">Пакет для утилизации ёлки</div>
@@ -407,7 +421,7 @@
                     </div>
                     <div class="useful_total">
                         <div class="useful_total-pricebox">
-                            <div class="useful_total-icon"><img src="./images/equals.svg" alt=""></div>
+                            <div class="useful_total-icon"><span class="useful_total-icon-text showb_mobile">Итого:</span><img src="./images/equals.svg" alt=""></div>
                             <div class="useful_total-price"><span>700</span> ₽</div>
                         </div>
                         <div class="useful_total-btn btn">Купить комплектом</div>
@@ -861,7 +875,7 @@
                             <div class="modal_col">
                                 <input type="text" class="form_input" placeholder="Имя*">
                                 <input type="text" class="form_input" placeholder="E-mail">
-                                <input type="text" class="form_input" placeholder="Телефон">
+                                <input type="text" class="form_input" placeholder="Телефон*">
                                 <div class="modal_cart-policy hide_mobile">Нажимая кнопку «Отправить», вы соглашаетесь
                                     с <a href="#">Политикой конфиденциальности</a></div>
                             </div>
