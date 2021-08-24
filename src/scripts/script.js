@@ -249,7 +249,7 @@ const enableSwiper = function() {
       nextEl: '.news_slider_next',
       prevEl: '.news_slider_prev'
     },
-    speed: 10000000,
+    speed: 1000,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
@@ -300,7 +300,7 @@ const enableMainSwiper = function() {
     centeredSlides: true,
     speed: 1000,
     autoplay: {
-      delay: 50000000,
+      delay: 5000,
       disableOnInteraction: false,
     },
     pagination: {
