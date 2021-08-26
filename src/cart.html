@@ -297,7 +297,11 @@
                                             <div class="cart_product-dopsbox">
                                                 <div class="cart_product-dops">
                                                     <input type="checkbox" id="add_inslall" class="sidebar_view-checkbox">
-                                                    <label for="add_inslall" class="sidebar_view-label">Установка 300 ₽ <span class="icon-help"></span></label>
+                                                    <label for="add_inslall" class="sidebar_view-label">Установка 300 ₽
+                                                        <span class="icon-help"><div class="help_popup">
+                                                        <a href="#">Стоимость установки</a> зависит от высоты дерева
+                                                    </div></span></label>
+
                                                 </div>
                                                 <div class="cart_product-dops">
                                                     <input type="checkbox" id="add_bag" class="sidebar_view-checkbox">
@@ -332,7 +336,7 @@
                                             <label for="delivery_type_3" class="sidebar_view-label">Самовывоз</label>
                                         </div>
                                         <div class="cart_delivery-type-descr"><span>Бесплатно</span>
-                                            Адрес склада: Московская область, Ленинский район, деревня Калиновка</div>
+                                            Адрес склада:Московская область, Ленинский район, деревня Калиновка</div>
                                     </div>
                                 </div>
                                 <div class="cart_delivery-info"><a href="#">Стоимость доставки</a> зависит от высоты дерева</div>
@@ -340,10 +344,10 @@
                                     <div class="cart_delivery-col">
                                         <div class="cart_blue-title">Адрес доставки</div>
                                         <div class="cart_blue-form">
-                                            <input type="text" placeholder="Населенный пункт*" class="cart_blue-input">
-                                            <input type="text" placeholder="Улица*" class="cart_blue-input">
-                                            <input type="text" placeholder="Дом*" class="cart_blue-input">
-                                            <input type="text" placeholder="Квартира" class="cart_blue-input">
+                                            <input type="text" placeholder="Населенный пункт*" class="cart_blue-input" id="address_punkt">
+                                            <input type="text" placeholder="Улица*" class="cart_blue-input" id="address_street">
+                                            <input type="text" placeholder="Дом*" class="cart_blue-input" id="address_house">
+                                            <input type="text" placeholder="Квартира" class="cart_blue-input" id="address_appart">
                                         </div>
                                     </div>
                                     <div class="cart_delivery-col">
@@ -360,21 +364,21 @@
                                     <div class="cart_payments">
                                         <div class="cart_payments-item">
                                             <div class="cart_delivery-type-check">
-                                                <input type="checkbox" id="payment_type_1" class="sidebar_view-checkbox">
+                                                <input name="payment" type="radio" value="Наличными" id="payment_type_1" class="sidebar_view-checkbox payment_type_js">
                                                 <label for="payment_type_1" class="sidebar_view-label">Наличными</label>
                                             </div>
 
                                         </div>
                                         <div class="cart_payments-item">
                                             <div class="cart_delivery-type-check">
-                                                <input type="checkbox" id="payment_type_2" class="sidebar_view-checkbox">
+                                                <input name="payment" type="radio" value="картой" id="payment_type_2" class="sidebar_view-checkbox payment_type_js">
                                                 <label for="payment_type_2" class="sidebar_view-label"><img src="./images/payments_type_1.png" alt="" class="responze"></label>
                                             </div>
                                             <div class="cart_payments-descr">Оплата банковской картой (Visa, Master Card, МИР)</div>
                                         </div>
                                         <div class="cart_payments-item">
                                             <div class="cart_delivery-type-check">
-                                                <input type="checkbox" id="payment_type_3" class="sidebar_view-checkbox">
+                                                <input name="payment" type="radio" value="приложением" id="payment_type_3" class="sidebar_view-checkbox payment_type_js">
                                                 <label for="payment_type_3" class="sidebar_view-label"><img src="./images/payments_type_2.png" alt="" class="responze"></label>
                                             </div>
                                             <div class="cart_payments-descr">Apple pay / Google pay</div>
@@ -414,9 +418,9 @@
                                 <div class="cart_sidebar-total">300 ₽</div>
                             </div>
                             <div class="cart_sidebar-delivery">
-                                Заказ будет доставлен <span id="delivery-date" >8.07.2021</span> по адресу: <span id="delivery-addr">г. Москва, ул. Кирова, д.54., кв. 12</span>
+                                Заказ будет доставлен <span id="delivery-date" >8.07.2021</span> по адресу: г. <span id="delivery-addr"></span>, <span id="delivery-street"></span>, д.<span id="delivery-houset"></span>., кв. <span id="address_appartset"></span>
                             </div>
-                            <div class="cart_sidebar-payment">Заказ будет оплачен картой </div>
+                            <div class="cart_sidebar-payment">Заказ будет оплачен <span id="address_payments"></span> </div>
                             <div class="cart_sidebar-btn btn">Перейти к оплате</div>
                             <div class="cart_sidebar-policy">Нажимая кнопку «Перейти к оплате», Вы автоматически соглашаетесь
                                 <a href="#">с условиями и правилами пользования торговой площадкой</a> и
@@ -569,7 +573,7 @@
                                     с <a href="#">Политикой конфиденциальности</a></div>
                             </div>
                             <div class="modal_col">
-                                <textarea class="modal_cart-textarea" id="" cols="30" rows="4" placeholder="Комментарий"></textarea>
+                                <textarea class="modal_cart-textarea" id="3" cols="30" rows="4" placeholder="Комментарий"></textarea>
                                 <div class="modal_cart-policy showb_mobile">Нажимая кнопку «Отправить», вы соглашаетесь
                                     с <a href="#">Политикой конфиденциальности</a></div>
                                 <input type="submit" class="form_btn btn" value="Отправить">

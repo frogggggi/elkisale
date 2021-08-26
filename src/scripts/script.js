@@ -664,6 +664,42 @@ if (minHeightElement1 && maxHeightElement1) {
   });
 }
 
+const addressAdr = document.querySelector('#delivery-addr');
+const addressStr = document.querySelector('#delivery-street');
+const addressHous = document.querySelector('#delivery-houset');
+const addressAppar = document.querySelector('#address_appartset');
+
+// const paymentType = document.getElementsByName('payment');
+
+
+const addressPunkt = document.querySelector('#address_punkt');
+const addressStreer = document.querySelector('#address_street');
+const addressHouse = document.querySelector('#address_house');
+const addressAppa = document.querySelector('#address_appart');
+const addressPayments = document.querySelector('#address_payments');
+const paymentType = document.querySelectorAll('.payment_type_js');
+
+
+addressPunkt.addEventListener("change", evt => {
+  addressAdr.innerHTML = addressPunkt.value;
+});
+addressStreer.addEventListener("change", evt => {
+  addressStr.innerHTML = addressStreer.value;
+});
+addressHouse.addEventListener("change", evt => {
+  addressHous.innerHTML = addressHouse.value;
+});
+addressAppa.addEventListener("change", evt => {
+  addressAppa.innerHTML = addressAppa.value;
+});
+
+// for (var i=0;i<paymentType.length;i++){
+//   paymentType[i].addEventListener("change", evt => {
+//     addressPayments.innerHTML = paymentType[i].value;
+//   });
+// }
+
+
 // TABS
 var $tabs = function (target) {
   var
