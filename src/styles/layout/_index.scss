@@ -153,7 +153,7 @@
 .prodmain_wrapper {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin: 0 -15px;
 }
@@ -1364,6 +1364,7 @@ input.sidebar_price_input::-webkit-inner-spin-button {
 }
 .product_slider-item {
   cursor: pointer;
+  width: 71px;
 }
 .product_slider-bigitem {
   cursor: pointer;
@@ -1729,6 +1730,7 @@ swiper-slide img {
   box-sizing: border-box;
   border-radius: 12px;
   padding: 20px;
+  max-width: 276px;
   &:hover {
     border: 2px solid #006244;
     padding: 19px;
@@ -2226,6 +2228,8 @@ table tbody tr:last-child td:last-child {
   position: relative;
   max-width: 790px;
   cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
   .icon-play_in {
     font-size: 23px;
     position: absolute;
@@ -2433,7 +2437,7 @@ table tbody tr:last-child td:last-child {
   line-height: 24px;
   color: #000000;
   p {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -2442,7 +2446,9 @@ table tbody tr:last-child td:last-child {
     color: #000000;
   }
 }
-
+.contacts_item.contacts_map {
+  margin-top: 28px;
+}
 .contacts_map {
   margin-top: 80px;
   overflow: hidden;
@@ -2589,7 +2595,7 @@ table tbody tr:last-child td:last-child {
 }
 .cart_product-dopsbox {}
 .cart_product-dops {
-  margin-bottom: 72px;
+  margin-bottom: 67px;
   &:last-child {
     margin-bottom: 0;
   }
@@ -2881,13 +2887,13 @@ table tbody tr:last-child td:last-child {
   display: none;
   position: absolute;
   top: 56px;
-  min-width: 37vw;
+  min-width: 950px;
   z-index: 2;
   background: #fff;
   border: 1px solid #D8D8E3;
   box-sizing: border-box;
   border-radius: 12px;
-  padding: 70px 32px 55px;
+  padding: 70px 75px 55px 32px;
   margin: 0 -32px;
   justify-content: space-between;
   &:before {
@@ -3430,13 +3436,26 @@ table tbody tr:last-child td:last-child {
   .mt80 {
     margin-top: 40px;
   }
+  .oursklad_section {
+    .container {
+      padding: 0;
+    }
+  }
   .oursklad_flex {
     flex-direction: column;
   }
+  .oursklad_title {
+    padding: 0 16px;
+  }
   .oursklad_col {
     &:first-child {
-      margin-right: 0;
-      margin-bottom: 15px;
+      margin: 0 0 15px;
+      img {
+        border-radius: 0;
+      }
+    }
+    &:last-child {
+      padding: 0 16px;
     }
   }
   .banner_section {
@@ -3980,6 +3999,13 @@ table tbody tr:last-child td:last-child {
     a {
       color: #000000;
     }
+  }
+  .cart_delivery-info.showf_mobile {
+    display: block !important;
+  }
+  .cart_blue-date {
+    min-width: 100%;
+    background: #fff;
   }
   #modal_cart {
     padding: 0;

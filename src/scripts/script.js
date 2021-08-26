@@ -100,15 +100,15 @@ const enableSwipers = function() {
         spaceBetween: 10
       },
       568: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 10,
       },
       998: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 10
       },
       999: {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 10
       },
       1441: {
