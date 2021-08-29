@@ -371,6 +371,39 @@ if (mobileFilterBtn) {
   });
 }
 
+const mobileViewBtn = document.querySelector('.catalog_view');
+const wrapperCatalogMain = document.querySelector('.prodmain_wrapper');
+if (mobileViewBtn) {
+  mobileViewBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (wrapperCatalogMain.classList.contains('catalog_view_tpl_1')) {
+      wrapperCatalogMain.classList.add('catalog_view_tpl_2'); // works correctly
+      wrapperCatalogMain.classList.remove('catalog_view_tpl_1'); // works correctly
+    }else {
+      wrapperCatalogMain.classList.add('catalog_view_tpl_1'); // works correctly
+      wrapperCatalogMain.classList.remove('catalog_view_tpl_2'); // works correctly
+    }
+  });
+}
+
+const selectallBox = document.querySelector('.cart_selectall');
+const selectallBtn = document.querySelector('#selectall');
+const selectedItems = document.querySelectorAll('.cart_product .cart_product-check .sidebar_view-checkbox');
+if (selectallBox) {
+  selectallBox.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (selectallBtn.checked == true) {
+      selectallBtn.checked = false;
+    }else {
+      selectallBtn.checked = true;
+      selectedItems.forEach(function (item) {
+        item.checked = true;
+      });
+    }
+
+  });
+}
+
 
 
 
