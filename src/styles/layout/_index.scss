@@ -1312,6 +1312,7 @@ input.sidebar_price_input::-webkit-inner-spin-button {
     justify-content: space-between;
     .icon-arrow {
       font-size: 16px;
+      margin-right: 12px;
     }
   }
   .sidebar_view-checkbox {
@@ -1385,6 +1386,7 @@ swiper-slide img {
 .swiper_thumbs {
   width: 100%;
   max-width: 71px;
+  min-width: 71px;
   margin-right: 32px;
 }
 .swiper_big {
@@ -3000,7 +3002,10 @@ table tbody tr:last-child td:last-child {
   }
 }
 
-
+.reviews_userphotos .swiper-container {
+  max-width: 789px;
+  margin: 0 auto 0 0;
+}
 
 
 
@@ -4789,7 +4794,9 @@ table tbody tr:last-child td:last-child {
   .swiper_big-arrpws.swiper_big-prev {
     left: -40px;
   }
-
+  .yourchoice_slider_arrows {
+    display: none;
+  }
 
 
   /* product page end */

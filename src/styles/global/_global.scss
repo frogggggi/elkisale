@@ -257,7 +257,7 @@ button {
 }
 
 .hide_mobile {
-  display: none!important;
+  display: block!important;
 }
 
 
@@ -464,6 +464,9 @@ select:-webkit-autofill:focus {
 @media only screen and (max-width: 768px) {
   .container {
     padding: 0 16px;
+  }
+  .hide_mobile {
+    display: none !important;
   }
 }
 

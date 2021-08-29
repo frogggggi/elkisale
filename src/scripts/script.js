@@ -177,10 +177,8 @@ const enableSwipers = function() {
         centeredSlidesBounds: true,
       },
       999: {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 19,
-        centeredSlides: true,
-        centeredSlidesBounds: true,
       },
       1441: {
         slidesPerView: 4,
@@ -215,7 +213,8 @@ const enableSwipers = function() {
       },
       568: {
         slidesPerView: 2,
-        spaceBetween: 10
+        spaceBetween: 10,
+        navigation: false
       },
       998: {
         slidesPerView: 2,
@@ -679,25 +678,36 @@ const addressAppa = document.querySelector('#address_appart');
 const addressPayments = document.querySelector('#address_payments');
 const paymentType = document.querySelectorAll('.payment_type_js');
 
+if (addressPunkt) {
+  addressPunkt.addEventListener("change", evt => {
+    addressAdr.innerHTML = addressPunkt.value;
+  });
+}
+if (addressStreer) {
+  addressStreer.addEventListener("change", evt => {
+    addressStr.innerHTML = addressStreer.value;
+  });
+}
+if (addressHouse) {
+  addressHouse.addEventListener("change", evt => {
+    addressHous.innerHTML = addressHouse.value;
+  });
+}
+if (addressAppa) {
+  addressAppa.addEventListener("change", evt => {
+    addressAppar.innerHTML = addressAppa.value;
+  });
+}
 
-addressPunkt.addEventListener("change", evt => {
-  addressAdr.innerHTML = addressPunkt.value;
-});
-addressStreer.addEventListener("change", evt => {
-  addressStr.innerHTML = addressStreer.value;
-});
-addressHouse.addEventListener("change", evt => {
-  addressHous.innerHTML = addressHouse.value;
-});
-addressAppa.addEventListener("change", evt => {
-  addressAppa.innerHTML = addressAppa.value;
-});
+if (paymentType) {
+  paymentType.forEach(function (item) {
+    item.addEventListener("change", evt => {
+      console.log(1);
+      addressPayments.innerHTML = item.value;
+    });
+  });
+}
 
-// for (var i=0;i<paymentType.length;i++){
-//   paymentType[i].addEventListener("change", evt => {
-//     addressPayments.innerHTML = paymentType[i].value;
-//   });
-// }
 
 
 // TABS
