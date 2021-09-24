@@ -325,6 +325,16 @@ console.log(
 // add custom js below
 
 
+const open_catalog_mob = document.querySelector('.open_catalog_mob');
+const catalog_nav_block = document.querySelector('.catalog_nav_block');
+if (open_catalog_mob) {
+  open_catalog_mob.addEventListener('click', (e) => {
+    e.preventDefault();
+    catalog_nav_block.classList.toggle('active'); // works correctly
+  });
+}
+
+
 const wrapper = document.querySelector('.wrapper');
 const burger = document.querySelector('.mob_burger');
 const navMob = document.querySelector('.nav_mobile_js');
@@ -403,6 +413,18 @@ if (selectallBox) {
 
   });
 }
+
+const sidebar_title = document.querySelectorAll('.catalog_nav_block .sidebar-title');
+// eslint-disable-next-line no-plusplus
+if (sidebar_title) {
+  for (let i = 0; i < sidebar_title.length; i++) {
+    sidebar_title[i].addEventListener('click', function (e) {
+      e.preventDefault();
+      this.closest('.sidebar_group').classList.toggle('active');
+    });
+  }
+}
+
 
 
 
