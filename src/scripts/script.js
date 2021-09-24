@@ -325,14 +325,7 @@ console.log(
 // add custom js below
 
 
-const open_catalog_mob = document.querySelector('.open_catalog_mob');
-const catalog_nav_block = document.querySelector('.catalog_nav_block');
-if (open_catalog_mob) {
-  open_catalog_mob.addEventListener('click', (e) => {
-    e.preventDefault();
-    catalog_nav_block.classList.toggle('active'); // works correctly
-  });
-}
+
 
 
 const wrapper = document.querySelector('.wrapper');
@@ -341,6 +334,10 @@ const navMob = document.querySelector('.nav_mobile_js');
 const mobileFilterBlock = document.querySelector('.catalog_filter_block');
 const closeNavMob = document.querySelector('.close_nav_mobile');
 const bgNavMob = document.querySelector('.bg_nav_mobile');
+const open_catalog_mob = document.querySelector('.open_catalog_mob');
+const back_nav = document.querySelector('.back_nav');
+const catalog_nav_block = document.querySelector('.catalog_nav_block');
+
 if (burger) {
   burger.addEventListener('click', (e) => {
     e.preventDefault();
@@ -354,6 +351,9 @@ if (burger) {
     if (mobileFilterBlock) {
       mobileFilterBlock.classList.remove('active'); // works correctly
     }
+    if (catalog_nav_block) {
+      catalog_nav_block.classList.remove('active'); // works correctly
+    }
     navMob.classList.remove('active'); // works correctly
     wrapper.classList.remove('fixed'); // works correctly
   });
@@ -362,6 +362,9 @@ if (burger) {
     burger.classList.remove('active'); // works correctly
     if (mobileFilterBlock) {
       mobileFilterBlock.classList.remove('active'); // works correctly
+    }
+    if (catalog_nav_block) {
+      catalog_nav_block.classList.remove('active'); // works correctly
     }
     navMob.classList.remove('active'); // works correctly
     wrapper.classList.remove('fixed'); // works correctly
@@ -380,6 +383,26 @@ if (mobileFilterBtn) {
     wrapperMain.classList.toggle('fixed'); // works correctly
   });
 }
+
+
+if (open_catalog_mob) {
+  open_catalog_mob.addEventListener('click', (e) => {
+    e.preventDefault();
+    navMob.classList.remove('active'); // works correctly
+    catalog_nav_block.classList.toggle('active'); // works correctly
+
+  });
+}
+if (back_nav) {
+  back_nav.addEventListener('click', (e) => {
+    e.preventDefault();
+    navMob.classList.add('active'); // works correctly
+    catalog_nav_block.classList.remove('active'); // works correctly
+
+  });
+}
+
+
 
 const mobileViewBtn = document.querySelector('.catalog_view');
 const wrapperCatalogMain = document.querySelector('.prodmain_wrapper');

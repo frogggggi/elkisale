@@ -1400,6 +1400,11 @@ input.sidebar_price_input::-webkit-inner-spin-button {
 
 }
 
+section {
+  position: relative;
+  z-index: 0;
+}
+
 .catalog_filter_block {
   .nav_mobile-wrapper {
     background: #EDF5FA;
