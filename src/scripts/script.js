@@ -73,9 +73,11 @@ const enableSwipers = function() {
     breakpoints: {
       999: {
         slidesPerView: 1,
+        centeredSlides: true,
       },
       1280: {
         slidesPerView: 1,
+        centeredSlides: true,
       },
     },
   });
@@ -648,11 +650,19 @@ function onTouchEnd() {
   stopScrolling = false;
 }
 
+function numberWithSpaces(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
 
 const minPriceElement = document.getElementById("price-min_val");
 const maxPriceElement = document.getElementById("price-max_val");
 const minPriceElement1 = document.getElementById("price-min_val1");
 const maxPriceElement1 = document.getElementById("price-max_val1");
+
+minPriceElement.value = numberWithSpaces(minPriceElement.value);
+maxPriceElement.value = numberWithSpaces(maxPriceElement.value);
+minPriceElement1.value = numberWithSpaces(minPriceElement1.value);
+maxPriceElement1.value = numberWithSpaces(maxPriceElement1.value);
 
 if (minPriceElement && maxPriceElement) {
   const minPriceElementAttr = minPriceElement.getAttribute("min");
@@ -669,8 +679,8 @@ if (minPriceElement && maxPriceElement) {
       if (ui.values[0] == ui.values[1]) {
         return false;
       }
-      $("#price-min_val").val(ui.values[0]);
-      $("#price-max_val").val(ui.values[1]);
+      $("#price-min_val").val(numberWithSpaces(ui.values[0]));
+      $("#price-max_val").val(numberWithSpaces(ui.values[1]));
     }
   });
 }
@@ -689,16 +699,37 @@ if (minPriceElement1 && maxPriceElement1) {
       if (ui.values[0] == ui.values[1]) {
         return false;
       }
-      $("#price-min_val1").val(ui.values[0]);
-      $("#price-max_val1").val(ui.values[1]);
+      $("#price-min_val1").val(numberWithSpaces(ui.values[0]));
+      $("#price-max_val1").val(numberWithSpaces(ui.values[1]));
     }
   });
 }
+
+function razr(){
+  var val = parseFloat(this.value.replace(/\D/g,''));
+  if (this.value === '') {
+    val = 0;
+  }
+  this.value = numberWithSpaces(val);
+}
+let valot = document.querySelectorAll('.sidebar_price_input');
+if (valot) {
+  valot.forEach(function (item) {
+    item.addEventListener("input", razr);
+})};
+
+
+
 
 const minHeightElement = document.getElementById("height-min_val");
 const maxHeightElement = document.getElementById("height-max_val");
 const minHeightElement1 = document.getElementById("height-min_val1");
 const maxHeightElement1 = document.getElementById("height-max_val1");
+
+minHeightElement.value = numberWithSpaces(minHeightElement.value);
+maxHeightElement.value = numberWithSpaces(maxHeightElement.value);
+minHeightElement1.value = numberWithSpaces(minHeightElement1.value);
+maxHeightElement1.value = numberWithSpaces(maxHeightElement1.value);
 
 if (minHeightElement && maxHeightElement) {
   const minHeightElementAttr = minHeightElement.getAttribute("min");
@@ -715,8 +746,8 @@ if (minHeightElement && maxHeightElement) {
       if (ui.values[0] == ui.values[1]) {
         return false;
       }
-      $("#height-min_val").val(ui.values[0]);
-      $("#height-max_val").val(ui.values[1]);
+      $("#height-min_val").val(numberWithSpaces(ui.values[0]));
+      $("#height-max_val").val(numberWithSpaces(ui.values[1]));
     }
   });
 }
@@ -735,8 +766,8 @@ if (minHeightElement1 && maxHeightElement1) {
       if (ui.values[0] == ui.values[1]) {
         return false;
       }
-      $("#height-min_val1").val(ui.values[0]);
-      $("#height-max_val1").val(ui.values[1]);
+      $("#height-min_val1").val(numberWithSpaces(ui.values[0]));
+      $("#height-max_val1").val(numberWithSpaces(ui.values[1]));
     }
   });
 }

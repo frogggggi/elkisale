@@ -1550,6 +1550,29 @@ swiper-slide img {
 }
 .product_price {
   margin-bottom: 32px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  .prodmain_item-seil {
+    width: 86px;
+    height: 44px;
+    right: 0;
+    top: 0;
+  }
+}
+.product_price-cur {
+  font-size: 44px;
+  margin: 10px 0 0 8px;
+  line-height: 1;
+}
+.product_price-old {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  text-decoration-line: line-through;
+  color: #808080;
+  margin-left: 22px;
+  margin-top: 3px;
 }
 .product_descr {
   font-weight: normal;
@@ -3149,7 +3172,9 @@ table tbody tr:last-child td:last-child {
   margin: 0 auto 0 0;
 }
 
-
+.logo-mainslider_mobile {
+  display: none;
+}
 
 
 
@@ -3618,6 +3643,11 @@ table tbody tr:last-child td:last-child {
 }
 
 @media only screen and (max-width: 768px) {
+  section {
+    max-width: 100%;
+    overflow: hidden;
+
+  }
   .prodmain_item-seil {
     font-weight: bold;
     font-size: 20px;
@@ -3656,6 +3686,13 @@ table tbody tr:last-child td:last-child {
     background-size: contain;
     margin-top: 56px;
     padding-top: 51%;
+  }
+  .logo-mainslider_mobile {
+    margin-bottom: 20px;
+    display: block;
+    img {
+      margin: 0 auto;
+    }
   }
   .banner_wrapper {
     min-height: auto;
@@ -4516,6 +4553,16 @@ table tbody tr:last-child td:last-child {
     font-size: 28px;
     line-height: 36px;
     margin: 0 0 14px;
+    position: initial;
+  }
+  .product_price-cur {
+    margin: 5px 0 0 5px;
+    font-size: 28px;
+  }
+  .product_price-old {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
   }
   .product_contaiter {
     margin: 0 0 40px;
