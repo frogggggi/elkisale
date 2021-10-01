@@ -654,10 +654,10 @@ function numberWithSpaces(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
 
-const minPriceElement = document.getElementById("price-min_val");
-const maxPriceElement = document.getElementById("price-max_val");
-const minPriceElement1 = document.getElementById("price-min_val1");
-const maxPriceElement1 = document.getElementById("price-max_val1");
+const minPriceElement = document.querySelector(".price-min_val");
+const maxPriceElement = document.querySelector(".price-max_val");
+const minPriceElement1 = document.querySelector(".price-min_val1");
+const maxPriceElement1 = document.querySelector(".price-max_val1");
 
 minPriceElement.value = numberWithSpaces(minPriceElement.value);
 maxPriceElement.value = numberWithSpaces(maxPriceElement.value);
@@ -679,8 +679,8 @@ if (minPriceElement && maxPriceElement) {
       if (ui.values[0] == ui.values[1]) {
         return false;
       }
-      $("#price-min_val").val(numberWithSpaces(ui.values[0]));
-      $("#price-max_val").val(numberWithSpaces(ui.values[1]));
+      $(".price-min_val").val(numberWithSpaces(ui.values[0]));
+      $(".price-max_val").val(numberWithSpaces(ui.values[1]));
     }
   });
 }
@@ -699,8 +699,8 @@ if (minPriceElement1 && maxPriceElement1) {
       if (ui.values[0] == ui.values[1]) {
         return false;
       }
-      $("#price-min_val1").val(numberWithSpaces(ui.values[0]));
-      $("#price-max_val1").val(numberWithSpaces(ui.values[1]));
+      $(".price-min_val1").val(numberWithSpaces(ui.values[0]));
+      $(".price-max_val1").val(numberWithSpaces(ui.values[1]));
     }
   });
 }
@@ -721,10 +721,10 @@ if (valot) {
 
 
 
-const minHeightElement = document.getElementById("height-min_val");
-const maxHeightElement = document.getElementById("height-max_val");
-const minHeightElement1 = document.getElementById("height-min_val1");
-const maxHeightElement1 = document.getElementById("height-max_val1");
+const minHeightElement = document.querySelector(".height-min_val");
+const maxHeightElement = document.querySelector(".height-max_val");
+const minHeightElement1 = document.querySelector(".height-min_val1");
+const maxHeightElement1 = document.querySelector(".height-max_val1");
 
 minHeightElement.value = numberWithSpaces(minHeightElement.value);
 maxHeightElement.value = numberWithSpaces(maxHeightElement.value);
@@ -746,8 +746,8 @@ if (minHeightElement && maxHeightElement) {
       if (ui.values[0] == ui.values[1]) {
         return false;
       }
-      $("#height-min_val").val(numberWithSpaces(ui.values[0]));
-      $("#height-max_val").val(numberWithSpaces(ui.values[1]));
+      $(".height-min_val").val(numberWithSpaces(ui.values[0]));
+      $(".height-max_val").val(numberWithSpaces(ui.values[1]));
     }
   });
 }
@@ -766,8 +766,8 @@ if (minHeightElement1 && maxHeightElement1) {
       if (ui.values[0] == ui.values[1]) {
         return false;
       }
-      $("#height-min_val1").val(numberWithSpaces(ui.values[0]));
-      $("#height-max_val1").val(numberWithSpaces(ui.values[1]));
+      $(".height-min_val1").val(numberWithSpaces(ui.values[0]));
+      $(".height-max_val1").val(numberWithSpaces(ui.values[1]));
     }
   });
 }
