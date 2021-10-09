@@ -327,6 +327,34 @@ console.log(
 // add custom js below
 
 
+const iconHelp = document.querySelector('.icon-help');
+if (iconHelp) {
+  iconHelp.addEventListener('click', (e) => {
+    e.preventDefault();
+    iconHelp.classList.add('active');
+    onClickClose(iconHelp);
+
+  });
+}
+function onClickClose(elem) { // вызвать в момент показа окна, где elem - окно
+  function outsideClickListener(event) {
+    if (!elem.contains(event.target) && isVisible(elem)) {  // проверяем, что клик не по элементу и элемент виден
+      elem.classList.remove('active'); //скрыть
+      document.removeEventListener('click', outsideClickListener);
+    }
+  }
+  document.addEventListener('click', outsideClickListener)
+}
+function isVisible(elem) { //открыто ли условное окно
+  return !!elem && !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length );
+}
+
+
+
+
+
+
+
 
 
 
@@ -659,10 +687,13 @@ const maxPriceElement = document.querySelector(".price-max_val");
 const minPriceElement1 = document.querySelector(".price-min_val1");
 const maxPriceElement1 = document.querySelector(".price-max_val1");
 
-minPriceElement.value = numberWithSpaces(minPriceElement.value);
-maxPriceElement.value = numberWithSpaces(maxPriceElement.value);
-minPriceElement1.value = numberWithSpaces(minPriceElement1.value);
-maxPriceElement1.value = numberWithSpaces(maxPriceElement1.value);
+if (minPriceElement) {
+  minPriceElement.value = numberWithSpaces(minPriceElement.value);
+  maxPriceElement.value = numberWithSpaces(maxPriceElement.value);
+  minPriceElement1.value = numberWithSpaces(minPriceElement1.value);
+  maxPriceElement1.value = numberWithSpaces(maxPriceElement1.value);
+}
+
 
 if (minPriceElement && maxPriceElement) {
   const minPriceElementAttr = minPriceElement.getAttribute("min");
@@ -726,10 +757,12 @@ const maxHeightElement = document.querySelector(".height-max_val");
 const minHeightElement1 = document.querySelector(".height-min_val1");
 const maxHeightElement1 = document.querySelector(".height-max_val1");
 
-minHeightElement.value = numberWithSpaces(minHeightElement.value);
-maxHeightElement.value = numberWithSpaces(maxHeightElement.value);
-minHeightElement1.value = numberWithSpaces(minHeightElement1.value);
-maxHeightElement1.value = numberWithSpaces(maxHeightElement1.value);
+if (minHeightElement) {
+  minHeightElement.value = numberWithSpaces(minHeightElement.value);
+  maxHeightElement.value = numberWithSpaces(maxHeightElement.value);
+  minHeightElement1.value = numberWithSpaces(minHeightElement1.value);
+  maxHeightElement1.value = numberWithSpaces(maxHeightElement1.value);
+}
 
 if (minHeightElement && maxHeightElement) {
   const minHeightElementAttr = minHeightElement.getAttribute("min");
